@@ -74,7 +74,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Local
       - ASPNETCORE_URLS=http://+
-      - QUICKCODE_JWT_SECRET_KEY=f64b5085-ccb1-447a-aaf1-06634b45f32a
+      - QUICKCODE_JWT_SECRET_KEY=ff720baa-f21d-49f3-80dd-38c07851de48
     ports:
       - "6001:80"
 
