@@ -52,14 +52,11 @@ builder.Services.AddQuickCodeSwaggerGen(builder.Configuration);
 builder.Services.AddNswagServiceClient(builder.Configuration, typeof(QuickCodeBaseApiController));
 builder.Services.AddCustomHealthChecks(builder.Configuration);
 builder.Services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
-var port = Environment.GetEnvironmentVariable("PORT") ?? "80";
-builder.WebHost.UseUrls($"http://*:{port}");
 
 var app = builder.Build();
 
-
 var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
-Log.Information($"Started({environmentName} Port:{port})...");
+Log.Information($"Started({environmentName})...");
 
 var elasticConnectionString = Environment.GetEnvironmentVariable("ELASTIC_CONNECTION_STRING");
 

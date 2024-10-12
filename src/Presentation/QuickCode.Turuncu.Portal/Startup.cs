@@ -139,14 +139,6 @@ namespace QuickCode.Turuncu.Portal
                 //app.UseHsts();
             }
             
-            var port = Environment.GetEnvironmentVariable("PORT") ?? "80";
-            
-            app.Use(async (context, next) =>
-            {
-                context.Request.Host = new HostString($"*:{port}");
-                await next.Invoke();
-            });
-            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

@@ -1,5 +1,4 @@
 using System;
-using System.Globalization;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -54,10 +53,7 @@ var writeConnectionString = Environment.GetEnvironmentVariable("WRITE_CONNECTION
 var elasticConnectionString = Environment.GetEnvironmentVariable("ELASTIC_CONNECTION_STRING");
 var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "80";
-builder.WebHost.UseUrls($"http://*:{port}");
-
-Log.Information($"Started({environmentName} Port:{port})...");
+Log.Information($"Started({environmentName})...");
 Log.Information($"ReadConnectionString = {readConnectionString}");
 Log.Information($"WriteConnectionString = {writeConnectionString}");
 
@@ -166,21 +162,7 @@ using (var scope = app.Services.CreateScope())
     if ((runMigration == null || runMigration!.Equals("yes", StringComparison.CurrentCultureIgnoreCase)) &&
         databaseType != "inMemory")
     {
-        var originalCulture = CultureInfo.CurrentCulture;
-        var originalUICulture = CultureInfo.CurrentUICulture;
-
-        try
-        {
-            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
-            CultureInfo.CurrentUICulture = CultureInfo.InvariantCulture;
-
-            await dbContext.Database.MigrateAsync();
-        }
-        finally
-        {
-            CultureInfo.CurrentCulture = originalCulture;
-            CultureInfo.CurrentUICulture = originalUICulture;
-        }
+        await dbContext.Database.MigrateAsync();
     }
 }
 
