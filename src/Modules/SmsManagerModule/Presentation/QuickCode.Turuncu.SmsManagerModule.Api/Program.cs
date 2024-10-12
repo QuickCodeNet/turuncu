@@ -53,7 +53,10 @@ var writeConnectionString = Environment.GetEnvironmentVariable("WRITE_CONNECTION
 var elasticConnectionString = Environment.GetEnvironmentVariable("ELASTIC_CONNECTION_STRING");
 var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
 
-Log.Information($"Started({environmentName})...");
+var port = Environment.GetEnvironmentVariable("PORT") ?? "80";
+builder.WebHost.UseUrls($"http://*:{port}");
+
+Log.Information($"Started({environmentName} Port:{port})...");
 Log.Information($"ReadConnectionString = {readConnectionString}");
 Log.Information($"WriteConnectionString = {writeConnectionString}");
 
