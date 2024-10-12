@@ -1,0 +1,180 @@
+Table "PortalMenu" {
+  "Id" int [pk, not null, increment]
+  "Name" varchar(250) [not null]
+  "Text" varchar(250) [not null]
+  "Tooltip" varchar(250) [not null]
+  "ActionName" varchar(250) [not null]
+  "OrderNo" int [not null]
+  "ParentName" varchar(250) 
+  "ItemType" varchar(1) [not null, default: 'M']
+}
+
+Table "ColumnTypes" {
+  "Id" int [pk, not null, increment]
+  "TypeName" varchar(250)
+  "IosComponentName" varchar(250)
+  "IosType" varchar(250)
+  "IconCode" varchar(250)
+}
+
+Table "PortalPermissionTypes" {
+  "Id" int [pk, not null]
+  "Name" varchar(50) [not null]
+}
+
+Table "PortalPermissions" {
+  "Id" int [pk, not null, increment]
+  "Name" varchar(250) [not null]
+  "ItemType" varchar(1) [not null, default: 'M']
+}
+
+Table "ApiMethodDefinitions" {
+  "Id" int [pk, not null, increment]
+  "HttpMethod" varchar(250) [not null]
+  "ControllerName" varchar(250) [not null]
+  "Path" varchar(250) [not null]
+  "ItemType" varchar(1) [not null, default: 'M']
+}
+
+Table "KafkaEvents" {
+  "Id" int [pk, not null, increment]
+  "ApiMethodDefinitionId" int [not null]
+  "TopicName" varchar(250) [not null]
+  "OnComplete" boolean [not null, default: '((0))']
+  "OnError" boolean [not null, default: '((0))']
+  "OnTimeout" boolean [not null, default: '((0))']
+  Note: 'Query:GET_KAFKA_EVENTS[] Tables:KafkaEvents K, ApiMethodDefinitions A Select:K.*, A.HttpMethod, A.ControllerName, A.Path'
+}
+
+Table "ApiPermissionGroups" {
+  "Id" int [pk, not null, increment]
+  "PermissionGroupId" int [not null]
+  "ApiMethodDefinitionId" int [not null]
+  Note: 'Query:GET_API_PERMISSION_GROUPS[] Where:PermissionGroupId'
+  Note: 'Query:GET_API_PERMISSION_GROUP[] Where:ApiMethodDefinitionId, PermissionGroupId'
+}
+
+Table "PortalPermissionGroups" {
+  "Id" int [pk, not null, increment]
+  "PortalPermissionId" int [not null]
+  "PermissionGroupId" int [not null]
+  "PortalPermissionTypeId" int [not null, default: 0]
+  Note: 'Query:GET_PORTAL_PERMISSION_GROUPS[] Where:PermissionGroupId'
+  Note: 'Query:GET_PORTAL_PERMISSION_GROUP[] Where:PortalPermissionId, PermissionGroupId, PortalPermissionTypeId'
+}
+
+Table "PermissionGroups" {
+  "Id" int [pk, not null, increment]
+  "Name" varchar(50) [not null]
+}
+
+Table "TableComboboxSettings" {
+  "TableName" varchar(250) [pk, not null]
+  "IdColumn" varchar(250)
+  "RefTableName" varchar(250)
+  "RefTableColumnId" varchar(250)
+  "RefIdColumn" varchar(250)
+  "TextColumns" varchar(max)
+  "StringFormat" varchar(max)
+}
+
+Table "AspNetRoles" {
+  "Id" nvarchar(450) [pk, not null]
+  "Name" nvarchar(256)
+  "NormalizedName" nvarchar(256) [null]
+  "ConcurrencyStamp" nvarchar(MAX) [null]
+}
+
+Table "AspNetUsers" {
+  "Id" nvarchar(450) [pk, not null]
+  "FirstName" nvarchar(200) [null]
+  "LastName" nvarchar(200) [null]
+  "PermissionGroupId" int [not null, default: 1]
+  "UserName" nvarchar(256) [null]
+  "NormalizedUserName" nvarchar(256) [null]
+  "Email" nvarchar(256) [null]
+  "NormalizedEmail" nvarchar(256) [null]
+  "EmailConfirmed" bit [not null]
+  "PasswordHash" nvarchar(MAX) [null]
+  "SecurityStamp" nvarchar(MAX) [null]
+  "ConcurrencyStamp" nvarchar(MAX) [null]
+  "PhoneNumber" nvarchar(MAX) [null]
+  "PhoneNumberConfirmed" bit [not null]
+  "TwoFactorEnabled" bit [not null]
+  "LockoutEnd" datetimeoffset [null]
+  "LockoutEnabled" bit [not null]
+  "AccessFailedCount" int [not null]
+  Note: 'Query:GET_USER[1] Where:Email'
+}
+
+Table "RefreshTokens" {
+  "Id" int [pk, increment, not null]
+  "UserId" nvarchar(450) [not null]
+  "Token" nvarchar(500) [not null]
+  "ExpiryDate" datetime [not null]
+  "CreatedDate" datetime [not null, default: '(getdate())']
+  "IsRevoked" boolean [not null, default: '((0))']
+  Note: 'Query:GET_REFRESH_TOKEN[1] Where:Token, IsRevoked[Equals|false], ExpiryDate[>|Now]'
+  Note: 'Command:UPDATE_REFRESH_TOKEN Where:Token[Equals] Set: IsRevoked[true]'
+}
+
+Table "AspNetRoleClaims" {
+  "Id" int [pk, not null, increment]
+  "RoleId" nvarchar(450) [not null]
+  "ClaimType" nvarchar(MAX) [null]
+  "ClaimValue" nvarchar(MAX) [null]
+}
+
+Table "AspNetUserClaims" {
+  "Id" int [pk, not null, increment]
+  "UserId" nvarchar(450) [not null]
+  "ClaimType" nvarchar(MAX) [null]
+  "ClaimValue" nvarchar(MAX) [null]
+}
+
+Table "AspNetUserLogins" {
+  "LoginProvider" nvarchar(450) [pk, not null]
+  "ProviderKey" nvarchar(450) [pk, not null]
+  "ProviderDisplayName" nvarchar(MAX) [null]
+  "UserId" nvarchar(450) [not null] 
+}
+
+Table "AspNetUserRoles" {
+  "UserId" nvarchar(450) [pk, not null]
+  "RoleId" nvarchar(450) [pk, not null]
+}
+
+Table "AspNetUserTokens" {
+  "UserId" nvarchar(450) [pk, not null]
+  "LoginProvider" nvarchar(450) [not null]
+  "Name" nvarchar(450) [not null]
+  "Value" nvarchar(MAX) [null]
+}
+
+Ref: "AspNetUsers"."Id" < "AspNetUserRoles"."UserId"
+
+Ref: "AspNetUsers"."Id" < "AspNetUserClaims"."UserId"
+
+Ref: "AspNetUsers"."Id" < "AspNetUserTokens"."UserId"
+
+Ref: "AspNetRoles"."Id" < "AspNetUserRoles"."RoleId"
+
+Ref: "AspNetRoles"."Id" < "AspNetRoleClaims"."RoleId"
+
+Ref: "AspNetUsers"."Id" < "AspNetUserLogins"."UserId"
+
+Ref: "PermissionGroups"."Id" < "AspNetUsers"."PermissionGroupId"
+
+Ref: "PortalPermissionTypes"."Id" < "PortalPermissionGroups"."PortalPermissionTypeId"
+
+Ref: "PortalPermissions"."Id" < "PortalPermissionGroups"."PortalPermissionId"
+
+Ref: "ApiMethodDefinitions"."Id" < "KafkaEvents"."ApiMethodDefinitionId"
+
+Ref: "ApiMethodDefinitions"."Id" < "ApiPermissionGroups"."ApiMethodDefinitionId"
+
+Ref: "PortalPermissionGroups"."PermissionGroupId" > "PermissionGroups"."Id"
+
+Ref: "ApiPermissionGroups"."PermissionGroupId" > "PermissionGroups"."Id"
+
+Ref: "RefreshTokens"."UserId" > "AspNetUsers"."Id"
