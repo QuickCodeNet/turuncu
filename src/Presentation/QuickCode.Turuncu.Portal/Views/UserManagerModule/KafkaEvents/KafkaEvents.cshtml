@@ -1,0 +1,225 @@
+@model GetKafkaEventsData
+@{
+var title = "Kafka Event Manager";
+var moduleNames = new List<string>();
+var accordionId = "";
+var counter = 0;
+TempData["Title"] = title;
+}
+<div class="container-fluid" IsPageAvailable="true">
+    <form method="post" id="formList">
+        <div class="card text shadow mb-4">
+
+            <div class="card-body">
+                <h1 class="card-title">@title</h1>
+                <p class="card-text">You can manage your Kafka Events.</p>
+
+                <hr class="col-xs-12">
+                @if (Model.Items.Count == 0)
+                {
+                <div class="alert alert-danger" role="alert">
+                    No Data available in Kafka Events table.
+
+                </div>
+                }
+                else
+                {
+
+
+                @foreach (var moduleName in Model.Items.Keys.OrderBy(i=>i))
+                {
+                counter = 0;
+                if (!moduleNames.Contains(moduleName))
+                {
+                accordionId = $"accordion{moduleName}".Replace(" ", "");
+
+                @if (moduleNames.Count > 0)
+                {
+                @Html.Raw("</div><br />")
+                }
+
+                moduleNames.Add(moduleName);
+                <h3 class="card-title"><b>@moduleName.PascalToKebabCase().KebabCaseToPascal()</b>  <span class="badge badge-pill badge-light">  @Html.Raw($"{Model.Items[moduleName].Count} items")</span> </h3>
+                @Html.Raw($"<div class=\"accordion\" id=\"{accordionId}\">")
+                }
+
+                @foreach (var controllerName in Model.Items[moduleName].Keys.OrderBy(i=>i))
+                {
+                counter++;
+                var headerId = $"heading{moduleName}{controllerName}".Replace(" ", "");
+                var collapseId = $"collapse{moduleName}{controllerName}".Replace(" ", "");
+                <div class="card">
+                    <div class="card-header" id="@headerId">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link w-100 text-left" style="background-color: transparent; color: #3b488e; font-size: large; border-color: transparent" type="button" data-toggle="collapse" data-target="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
+                                @Html.Raw($"{controllerName[0..^"Controller".Length].PascalToKebabCase().KebabCaseToPascal()} ")
+                                <span class="badge badge-pill badge-info">@Html.Raw($"{Model.Items[moduleName][controllerName].Count} items")</span>
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="@collapseId" class="collapse @Html.Raw(counter==1 ? " show" : "")" aria-labelledby="@headerId" data-parent="#@accordionId">
+                        <div class="card-body">
+                            <table bc-border="Bordered" bc-striped="true" bc-hover="true" class="table-responsive" bc-theme="Light">
+                                <thead bc-theme="Dark">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>HttpMethod</th>
+                                    <th>Path</th>
+                                    <th>Topic Name</th>
+                                    <th>OnComplete</th>
+                                    <th>OnError</th>
+                                    <th>OnTimeout</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (var item in Model.Items[moduleName][controllerName])
+                                {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.HttpMethod</td>
+                                    <td>@item.Path</td>
+                                    <td>@item.TopicName</td>
+                                    <td>
+                                        <div style="margin-left:-20px;">
+                                            @if (item.OnComplete)
+                                            {
+                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_complete_{item.Id}") checked
+                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i> On"
+                                                   data-off="<i class='fa fa-times'></i>Off"
+                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnComplete/>
+                                            }
+                                            else
+                                            {
+                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_complete_{item.Id}")
+                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i>
+                                                                  On" data-off="<i class='fa fa-times'></i>
+                                                                   Off"
+                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnComplete/>
+                                            }
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="margin-left:-20px;">
+                                            @if (item.OnError)
+                                            {
+                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_error_{item.Id}") checked
+                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i> On"
+                                                   data-off="<i class='fa fa-times'></i>Off"
+                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnError/>
+                                            }
+                                            else
+                                            {
+                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_error_{item.Id}")
+                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i>
+                                                                  On" data-off="<i class='fa fa-times'></i>
+                                                                   Off"
+                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnError/>
+                                            }
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="margin-left:-20px;">
+                                            @if (item.OnTimeout)
+                                            {
+                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_timeout_{item.Id}") checked
+                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i> On"
+                                                   data-off="<i class='fa fa-times'></i>Off"
+                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnTimeout/>
+                                            }
+                                            else
+                                            {
+                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_timeout_{item.Id}")
+                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i>
+                                                                  On" data-off="<i class='fa fa-times'></i>
+                                                                   Off"
+                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnTimeout/>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                                }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+                }
+                }
+                }
+                @if (Model.Items.Count > 0)
+                {
+                @Html.Raw("</div>")
+                }
+            </div>
+        </div>
+    </form>
+
+    <div class="modal fade bd-example-modal-lg" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" id='itemDetailsContainer'>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid" IsPageAvailable="false">
+    @await Html.PartialAsync("_NotAuthorized")
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="~/js/lazyload.js"></script>
+<script type="text/javascript">
+    $("img.lazyload").lazyload();
+
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        let targetId = '';
+        $(this).ekkoLightbox({
+            onShown: function(lb) {
+                $(targetId).addClass('lbackground');
+            },
+            onShow: function(lb) {
+                targetId = '#' + lb.delegateTarget.id
+                $(targetId).addClass('lbackground');
+            },
+            onHidden: function(){
+                $(targetId).removeClass('lbackground');
+                if ($('.modal:visible').length) {
+                    $('body').addClass('modal-open');
+                    $('#itemDetailsModal').focus();
+                }
+
+            }
+        });
+    });
+
+    function submitform() {
+        $('#formList').submit();
+    }
+
+    function checkBoxChanged(cbox) {
+        console.log('Changed ' + cbox.id);
+        let values = cbox.id.replace("cbox_", "").split("_");
+        let updateKafkaEventData =  {
+            "id": parseInt(values[1]),
+            "eventName": values[0],
+            "value": cbox.checked ? 1 : 0
+        };
+
+        let url = '@Url.Action("UpdateKafkaEvent")';
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: updateKafkaEventData,
+            dataType: 'json',
+            success: function (data) {
+                console.log('Success Updated ' + cbox.id);
+            },
+            error: function (xhr, textStatus, error) {
+                console.log(xhr.statusText);
+                console.log(textStatus);
+                console.log(error);
+            },
+        });
+    }
+</script>

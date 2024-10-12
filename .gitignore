@@ -1,0 +1,12 @@
+.vs
+bin
+obj
+QuickCode.Turuncu.Api/bin
+QuickCode.Turuncu.Api/obj
+QuickCode.Turuncu.Portal/bin
+QuickCode.Turuncu.Portal/obj
+QuickCode.Turuncu.Web/bin
+QuickCode.Turuncu.Web/obj
+QuickCode.Turuncu.DataLayer/bin
+QuickCode.Turuncu.DataLayer/obj
+.DS_Store

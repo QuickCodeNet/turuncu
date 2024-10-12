@@ -1,0 +1,160 @@
+@model GetPortalPermissionGroupData
+@{
+    string title = "Portal Permission Manager";
+    TempData["Title"] = title;
+}
+<div class="container-fluid" IsPageAvailable="true">
+    <form method="post" id="formList">
+        <div class="card text shadow mb-4">
+
+            <div class="card-body">
+                <h1 class="card-title">@title</h1>
+                <p class="card-text">You can manage your Portal Page Permission and CRUD operations.</p>
+
+                <hr class="col-xs-12">
+                @if (Model.Items.PortalPermissions.Count == 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        No Data available in Portal Permissions table.
+                    </div>
+                }
+                else
+                {
+                    <table bc-border="Bordered" bc-striped="true" bc-hover="true" class="table-responsive" bc-theme="Light" style="width:380px;">
+
+                        <tbody>
+                            <tr>
+                                <td>
+
+                                    <select bc-label="GroupId" class="custom-select " asp-for="SelectedGroupId" asp-items="@Model.ComboList["PermissionGroups"].SetListWithSelected(Model.SelectedGroupId)" onchange="submitform();" style="width:350px;"></select>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                    <table bc-border="Bordered" bc-striped="true" bc-hover="true" class="table-responsive" bc-theme="Light">
+                        <thead bc-theme="Dark">
+                            <tr>
+
+                                <th>Portal Permission</th>
+
+                                @foreach (var itemType in Model.Items.PortalPermissions.First().PortalPermissionTypes)
+                                {
+                                    <th>@string.Format("{0}", Model.ComboList["PortalPermissionTypes"].GetListItemByItemId(itemType.PortalPermssionTypeId))</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Items.PortalPermissions)
+                            {
+                                <tr>
+                                    <td>			@string.Format("{0}", Model.ComboList["PortalPermissions"].GetListItemByItemId(item.PortalPermssionId))</td>
+                                    @foreach (var itemType in item.PortalPermissionTypes)
+                                    {
+                                        <td>
+                                            <div style="margin-left:-20px;">
+                                                @if (itemType.Value)
+                                                {
+                                                    <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_{Model.Items.PermissionGroupId}_{item.PortalPermssionId}_{itemType.PortalPermssionTypeId}") checked
+                                           data-toggle="toggle" data-on="<i class='fa fa-check'></i> @string.Format("{0}", Model.ComboList["PortalPermissionTypes"].GetListItemByItemId(itemType.PortalPermssionTypeId))"
+                                           data-off="<i class='fa fa-times'></i> @string.Format("{0}", Model.ComboList["PortalPermissionTypes"].GetListItemByItemId(itemType.PortalPermssionTypeId))"
+                                           data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@itemType.Value />
+                                                }
+                                                else
+                                                {
+                                                    <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_{Model.Items.PermissionGroupId}_{item.PortalPermssionId}_{itemType.PortalPermssionTypeId}")
+                                           data-toggle="toggle" data-on="<i class='fa fa-check'></i>
+                                                               @string.Format("{0}", Model.ComboList["PortalPermissionTypes"].GetListItemByItemId(itemType.PortalPermssionTypeId))" data-off="<i class='fa fa-times'></i>
+                                                               @string.Format("{0}", Model.ComboList["PortalPermissionTypes"].GetListItemByItemId(itemType.PortalPermssionTypeId))"
+                                           data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@itemType.Value />
+                                                }
+                                            </div>
+                                        </td>
+                                    }
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+
+        </div>
+
+    </form>
+
+    <div class="modal fade bd-example-modal-lg" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" id='itemDetailsContainer'>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid" IsPageAvailable="false">
+    @await Html.PartialAsync("_NotAuthorized")
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="~/js/lazyload.js"></script>
+<script type="text/javascript">
+    $("img.lazyload").lazyload();
+
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            var targetId = '';
+            $(this).ekkoLightbox({
+                onShown: function(lb) {
+                    $(targetId).addClass('lbackground');
+                },
+                onShow: function(lb) {
+                    targetId = '#' + lb.delegateTarget.id
+                    $(targetId).addClass('lbackground');
+                },
+                onHidden: function(){
+                    $(targetId).removeClass('lbackground');
+                    if ($('.modal:visible').length) {
+                        $('body').addClass('modal-open');
+                        $('#itemDetailsModal').focus();
+                    }
+
+                }
+            });
+    });
+
+    function submitform() {
+        $('#formList').submit();
+    }
+
+
+    function checkBoxChanged(cbox) {
+        console.log('Changed' + cbox.id);
+        var values = cbox.id.replace("cbox_", "").split("_");
+        var UpdatePermissionGroupRequestData =  {
+            "permissionGroupId": parseInt(values[0]),
+             "portalPermissionId": parseInt(values[1]),
+             "portalPermissionTypeId": parseInt(values[2]),
+             "value": cbox.checked ? 1 : 0
+        };
+
+        var url = '@Url.Action("UpdatePermission")';
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: UpdatePermissionGroupRequestData,
+            dataType: 'json',
+            success: function (data) {
+                console.log('Success Updated ' + cbox.id);
+            },
+            error: function (xhr, textStatus, error) {
+                console.log(xhr.statusText);
+                console.log(textStatus);
+                console.log(error);
+            },
+        });
+    }
+
+
+</script>

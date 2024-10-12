@@ -1,0 +1,120 @@
+{
+"PortalMenus": [
+	{
+		"Name" : "PortalPermissionTypes",
+		"Text" : "PortalPermissionTypes",
+		"Tooltip" : "PortalPermissionTypes",
+		"ActionName" : "/UserManagerModulePortalPermissionTypes/List",
+		"OrderNo" : 0,
+		"ParentName" : "PermissionSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "ApiMethodDefinitions",
+		"Text" : "ApiMethodDefinitions",
+		"Tooltip" : "ApiMethodDefinitions",
+		"ActionName" : "/UserManagerModuleApiMethodDefinitions/List",
+		"OrderNo" : 0,
+		"ParentName" : "PermissionSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "ApiPermissionGroups",
+		"Text" : "ApiPermissionGroups",
+		"Tooltip" : "ApiPermissionGroups",
+		"ActionName" : "/UserManagerModuleApiPermissionGroups/List",
+		"OrderNo" : 0,
+		"ParentName" : "PermissionSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "PortalPermissionGroups",
+		"Text" : "PortalPermissionGroups",
+		"Tooltip" : "PortalPermissionGroups",
+		"ActionName" : "/UserManagerModulePortalPermissionGroups/List",
+		"OrderNo" : 0,
+		"ParentName" : "PermissionSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "PortalPermissions",
+		"Text" : "PortalPermissions",
+		"Tooltip" : "PortalPermissions",
+		"ActionName" : "/UserManagerModulePortalPermissions/List",
+		"OrderNo" : 1,
+		"ParentName" : "PermissionSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "PermissionGroups",
+		"Text" : "PermissionGroups",
+		"Tooltip" : "PermissionGroups",
+		"ActionName" : "/UserManagerModulePermissionGroups/List",
+		"OrderNo" : 10,
+		"ParentName" : "PermissionSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "PortalMenus",
+		"Text" : "PortalMenus",
+		"Tooltip" : "PortalMenus",
+		"ActionName" : "/UserManagerModulePortalMenus/List",
+		"OrderNo" : 13,
+		"ParentName" : "PortalSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "PortalPermissionManager",
+		"Text" : "PortalPermissionManager",
+		"Tooltip" : "PortalPermissionManager",
+		"ActionName" : "/UserManagerModulePortalPermissionGroups/GetGroupPermissions",
+		"OrderNo" : 3,
+		"ParentName" : "PermissionManagers",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "ApiPermissionManager",
+		"Text" : "ApiPermissionManager",
+		"Tooltip" : "ApiPermissionManager",
+		"ActionName" : "/UserManagerModuleApiPermissionGroups/GetModulePermissions",
+		"OrderNo" : 1,
+		"ParentName" : "PermissionManagers",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "KafkaEventManager",
+		"Text" : "KafkaEventManager",
+		"Tooltip" : "KafkaEventManager",
+		"ActionName" : "/UserManagerModuleKafkaEvents/GetKafkaEvents",
+		"OrderNo" : 2,
+		"ParentName" : "PermissionManagers",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "Users",
+		"Text" : "Users",
+		"Tooltip" : "Users",
+		"ActionName" : "/UserManagerModuleAspNetUsers/List",
+		"OrderNo" : 28,
+		"ParentName" : "PortalSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "ColumnTypes",
+		"Text" : "ColumnTypes",
+		"Tooltip" : "ColumnTypes",
+		"ActionName" : "/UserManagerModuleColumnTypes/List",
+		"OrderNo" : 3,
+		"ParentName" : "PortalSettings",
+		"ItemType" : "M"
+	},
+	{
+		"Name" : "TableComboboxSettings",
+		"Text" : "TableComboboxSettings",
+		"Tooltip" : "TableComboboxSettings",
+		"ActionName" : "/UserManagerModuleTableComboboxSettings/List",
+		"OrderNo" : 40,
+		"ParentName" : "PortalSettings",
+		"ItemType" : "M"
+	}
+]}

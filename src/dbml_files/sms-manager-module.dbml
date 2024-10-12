@@ -1,0 +1,58 @@
+Table "INFO_MESSAGE" {
+  "ID" integer [pk, increment, not null]
+  "SMS_SENDER_ID" integer [not null]
+  "INFO_TYPE_ID" integer [not null]
+  "GSM_NUMBER" string [not null]
+  "MESSAGE" string [not null]
+  "MESSAGE_DATE" datetime [null, default: '(getdate())']
+  "MESSAGE_SID" string [not null]
+  "DAILY_COUNTER" integer [not null]
+}
+Table "CAMPAIGN_MESSAGE" {
+  "ID" integer [pk, increment, not null]
+  "SMS_SENDER_ID" integer [not null]
+  "CAMPAIGN_TYPE_ID" integer [not null]
+  "GSM_NUMBER" string [not null]
+  "MESSAGE" string [not null]
+  "MESSAGE_DATE" datetime [null, default: '(getdate())']
+  "MESSAGE_SID" string [not null]
+  "DAILY_COUNTER" integer [not null]
+}
+Table "OTP_MESSAGE" {
+  "ID" integer [pk, increment, not null]
+  "SMS_SENDER_ID" integer [not null]
+  "OTP_TYPE_ID" integer [not null]
+  "GSM_NUMBER" string [not null]
+  "OTP_CODE" string [not null]
+  "MESSAGE" string [not null]
+  "EXPIRE_SECONDS" integer [not null]
+  "MESSAGE_DATE" datetime [null, default: '(getdate())']
+  "MESSAGE_SID" string [not null]
+  "DAILY_COUNTER" integer [not null]
+}
+Table "OTP_TYPE" {
+  "ID" integer [pk, increment, not null]
+  "NAME" string [not null]
+  "TEMPLATE" string [not null]
+}
+Table "INFO_TYPE" {
+  "ID" integer [pk, increment, not null]
+  "NAME" string [not null]
+  "TEMPLATE" string [not null]
+}
+Table "CAMPAIGN_TYPE" {
+  "ID" integer [pk, increment, not null]
+  "NAME" string [not null]
+  "TEMPLATE" string [not null]
+}
+Table "SMS_SENDER" {
+  "ID" integer [pk, increment, not null]
+  "GSM_NUMBER" string [not null]
+  "PROVIDER_NAME" string [not null]
+} 
+Ref: "SMS_SENDER"."ID" < "INFO_MESSAGE"."SMS_SENDER_ID"
+Ref: "SMS_SENDER"."ID" < "OTP_MESSAGE"."SMS_SENDER_ID"
+Ref: "OTP_TYPE"."ID" < "OTP_MESSAGE"."OTP_TYPE_ID"
+Ref: "INFO_TYPE"."ID" < "INFO_MESSAGE"."INFO_TYPE_ID"
+Ref: "SMS_SENDER"."ID" < "CAMPAIGN_MESSAGE"."SMS_SENDER_ID"
+Ref: "CAMPAIGN_TYPE"."ID" < "CAMPAIGN_MESSAGE"."CAMPAIGN_TYPE_ID"

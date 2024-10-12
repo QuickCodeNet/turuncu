@@ -1,0 +1,1428 @@
+{
+"ApiPermissionGroups": [
+  {
+    "ApiMethodDefinitionId": 1,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 2,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 3,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 4,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 5,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 6,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 7,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 8,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 9,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 10,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 11,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 12,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 13,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 14,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 15,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 16,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 17,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 18,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 19,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 20,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 21,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 22,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 23,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 24,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 25,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 26,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 27,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 28,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 29,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 30,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 31,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 32,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 33,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 34,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 35,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 36,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 37,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 38,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 39,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 40,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 41,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 42,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 43,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 44,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 45,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 46,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 47,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 48,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 49,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 50,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 51,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 52,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 53,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 54,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 55,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 56,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 57,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 58,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 59,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 60,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 61,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 62,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 63,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 64,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 65,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 66,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 67,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 68,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 69,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 70,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 71,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 72,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 73,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 74,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 75,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 76,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 77,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 78,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 79,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 80,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 81,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 82,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 83,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 84,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 85,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 86,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 87,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 88,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 89,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 90,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 91,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 92,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 93,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 94,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 95,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 96,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 97,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 98,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 99,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 100,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 101,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 102,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 103,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 104,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 105,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 106,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 107,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 108,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 109,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 110,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 111,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 112,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 113,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 114,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 115,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 116,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 117,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 118,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 119,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 120,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 121,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 122,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 123,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 124,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 125,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 126,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 127,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 128,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 129,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 130,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 131,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 132,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 133,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 134,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 135,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 136,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 137,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 138,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 139,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 140,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 141,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 142,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 143,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 144,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 145,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 146,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 147,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 148,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 149,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 150,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 151,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 152,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 153,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 154,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 155,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 156,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 157,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 158,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 159,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 160,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 161,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 162,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 163,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 164,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 165,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 166,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 167,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 168,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 169,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 170,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 171,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 172,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 173,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 174,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 175,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 176,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 177,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 178,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 179,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 180,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 181,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 182,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 183,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 184,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 185,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 186,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 187,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 188,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 189,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 190,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 191,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 192,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 193,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 194,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 195,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 196,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 197,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 198,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 199,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 200,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 201,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 202,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 203,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 204,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 205,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 206,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 207,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 208,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 209,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 210,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 211,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 212,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 213,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 214,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 215,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 216,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 217,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 218,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 219,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 220,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 221,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 222,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 223,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 224,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 225,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 226,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 227,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 228,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 229,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 230,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 231,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 232,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 233,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 234,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 235,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 236,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 237,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 238,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 239,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 240,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 241,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 242,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 243,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 244,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 245,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 246,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 247,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 248,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 249,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 250,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 251,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 252,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 253,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 254,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 255,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 256,
+    "PermissionGroupId": 1
+  },
+  {
+    "ApiMethodDefinitionId": 1,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 2,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 4,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 7,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 8,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 10,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 15,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 16,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 18,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 23,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 24,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 26,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 33,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 34,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 36,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 40,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 41,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 43,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 48,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 49,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 51,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 56,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 57,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 59,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 68,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 69,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 71,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 74,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 75,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 77,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 84,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 85,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 87,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 101,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 102,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 104,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 109,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 110,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 112,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 115,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 116,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 118,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 121,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 122,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 124,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 127,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 128,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 130,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 133,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 134,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 136,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 139,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 140,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 142,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 145,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 146,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 148,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 151,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 152,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 154,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 157,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 158,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 160,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 165,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 166,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 168,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 173,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 174,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 176,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 181,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 182,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 184,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 193,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 194,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 196,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 199,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 200,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 202,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 205,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 206,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 208,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 211,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 212,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 214,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 219,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 220,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 222,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 227,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 228,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 230,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 235,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 236,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 238,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 247,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 248,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 250,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 253,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 254,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 255,
+    "PermissionGroupId": 2
+  },
+  {
+    "ApiMethodDefinitionId": 256,
+    "PermissionGroupId": 2
+  }
+]
+}

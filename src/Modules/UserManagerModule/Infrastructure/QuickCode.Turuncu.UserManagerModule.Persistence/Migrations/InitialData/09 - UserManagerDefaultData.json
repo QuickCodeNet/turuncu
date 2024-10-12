@@ -1,0 +1,1671 @@
+{
+  "PortalPermissions": [
+    {
+      "Id": 1,
+      "Name": "UserManagerModuleApiMethodDefinitions",
+      "ItemType": "G"
+    },
+    {
+      "Id": 2,
+      "Name": "UserManagerModuleApiPermissionGroups",
+      "ItemType": "G"
+    },
+    {
+      "Id": 3,
+      "Name": "UserManagerModuleAspNetRoleClaims",
+      "ItemType": "G"
+    },
+    {
+      "Id": 4,
+      "Name": "UserManagerModuleAspNetRoles",
+      "ItemType": "G"
+    },
+    {
+      "Id": 5,
+      "Name": "UserManagerModuleAspNetUserClaims",
+      "ItemType": "G"
+    },
+    {
+      "Id": 6,
+      "Name": "UserManagerModuleAspNetUserLogins",
+      "ItemType": "G"
+    },
+    {
+      "Id": 7,
+      "Name": "UserManagerModuleAspNetUserRoles",
+      "ItemType": "G"
+    },
+    {
+      "Id": 8,
+      "Name": "UserManagerModuleAspNetUsers",
+      "ItemType": "G"
+    },
+    {
+      "Id": 9,
+      "Name": "UserManagerModuleAspNetUserTokens",
+      "ItemType": "G"
+    },
+    {
+      "Id": 10,
+      "Name": "UserManagerModuleColumnTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 11,
+      "Name": "UserManagerModuleKafkaEvents",
+      "ItemType": "G"
+    },
+    {
+      "Id": 12,
+      "Name": "UserManagerModulePermissionGroups",
+      "ItemType": "G"
+    },
+    {
+      "Id": 13,
+      "Name": "UserManagerModulePortalMenus",
+      "ItemType": "G"
+    },
+    {
+      "Id": 14,
+      "Name": "UserManagerModulePortalPermissionGroups",
+      "ItemType": "G"
+    },
+    {
+      "Id": 15,
+      "Name": "UserManagerModulePortalPermissions",
+      "ItemType": "G"
+    },
+    {
+      "Id": 16,
+      "Name": "UserManagerModulePortalPermissionTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 17,
+      "Name": "UserManagerModuleRefreshTokens",
+      "ItemType": "G"
+    },
+    {
+      "Id": 18,
+      "Name": "UserManagerModuleTableComboboxSettings",
+      "ItemType": "G"
+    },
+    {
+      "Id": 19,
+      "Name": "EmailManagerModuleCampaignMessages",
+      "ItemType": "G"
+    },
+    {
+      "Id": 20,
+      "Name": "EmailManagerModuleCampaignTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 21,
+      "Name": "EmailManagerModuleEmailSenders",
+      "ItemType": "G"
+    },
+    {
+      "Id": 22,
+      "Name": "EmailManagerModuleInfoMessages",
+      "ItemType": "G"
+    },
+    {
+      "Id": 23,
+      "Name": "EmailManagerModuleInfoTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 24,
+      "Name": "EmailManagerModuleOtpMessages",
+      "ItemType": "G"
+    },
+    {
+      "Id": 25,
+      "Name": "EmailManagerModuleOtpTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 26,
+      "Name": "SmsManagerModuleCampaignMessages",
+      "ItemType": "G"
+    },
+    {
+      "Id": 27,
+      "Name": "SmsManagerModuleCampaignTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 28,
+      "Name": "SmsManagerModuleInfoMessages",
+      "ItemType": "G"
+    },
+    {
+      "Id": 29,
+      "Name": "SmsManagerModuleInfoTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 30,
+      "Name": "SmsManagerModuleOtpMessages",
+      "ItemType": "G"
+    },
+    {
+      "Id": 31,
+      "Name": "SmsManagerModuleOtpTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 32,
+      "Name": "SmsManagerModuleSmsSenders",
+      "ItemType": "G"
+    }
+  ],
+  "PortalMenus": [
+    {
+      "Name": "UserManagerModule",
+      "Text": "UserManagerModule",
+      "Tooltip": "UserManagerModule",
+      "ActionName": "",
+      "OrderNo": 100,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "ApiMethodDefinitions",
+      "Text": "ApiMethodDefinitions",
+      "Tooltip": "ApiMethodDefinitions",
+      "ActionName": "/UserManagerModuleApiMethodDefinitions/List",
+      "OrderNo": 100,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "ApiPermissionGroups",
+      "Text": "ApiPermissionGroups",
+      "Tooltip": "ApiPermissionGroups",
+      "ActionName": "/UserManagerModuleApiPermissionGroups/List",
+      "OrderNo": 101,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "AspNetRoleClaims",
+      "Text": "AspNetRoleClaims",
+      "Tooltip": "AspNetRoleClaims",
+      "ActionName": "/UserManagerModuleAspNetRoleClaims/List",
+      "OrderNo": 102,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "AspNetRoles",
+      "Text": "AspNetRoles",
+      "Tooltip": "AspNetRoles",
+      "ActionName": "/UserManagerModuleAspNetRoles/List",
+      "OrderNo": 103,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "AspNetUserClaims",
+      "Text": "AspNetUserClaims",
+      "Tooltip": "AspNetUserClaims",
+      "ActionName": "/UserManagerModuleAspNetUserClaims/List",
+      "OrderNo": 104,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "AspNetUserLogins",
+      "Text": "AspNetUserLogins",
+      "Tooltip": "AspNetUserLogins",
+      "ActionName": "/UserManagerModuleAspNetUserLogins/List",
+      "OrderNo": 105,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "AspNetUserRoles",
+      "Text": "AspNetUserRoles",
+      "Tooltip": "AspNetUserRoles",
+      "ActionName": "/UserManagerModuleAspNetUserRoles/List",
+      "OrderNo": 106,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "AspNetUsers",
+      "Text": "AspNetUsers",
+      "Tooltip": "AspNetUsers",
+      "ActionName": "/UserManagerModuleAspNetUsers/List",
+      "OrderNo": 107,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "AspNetUserTokens",
+      "Text": "AspNetUserTokens",
+      "Tooltip": "AspNetUserTokens",
+      "ActionName": "/UserManagerModuleAspNetUserTokens/List",
+      "OrderNo": 108,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "ColumnTypes",
+      "Text": "ColumnTypes",
+      "Tooltip": "ColumnTypes",
+      "ActionName": "/UserManagerModuleColumnTypes/List",
+      "OrderNo": 109,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "KafkaEvents",
+      "Text": "KafkaEvents",
+      "Tooltip": "KafkaEvents",
+      "ActionName": "/UserManagerModuleKafkaEvents/List",
+      "OrderNo": 110,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "PermissionGroups",
+      "Text": "PermissionGroups",
+      "Tooltip": "PermissionGroups",
+      "ActionName": "/UserManagerModulePermissionGroups/List",
+      "OrderNo": 111,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "PortalMenus",
+      "Text": "PortalMenus",
+      "Tooltip": "PortalMenus",
+      "ActionName": "/UserManagerModulePortalMenus/List",
+      "OrderNo": 112,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "PortalPermissionGroups",
+      "Text": "PortalPermissionGroups",
+      "Tooltip": "PortalPermissionGroups",
+      "ActionName": "/UserManagerModulePortalPermissionGroups/List",
+      "OrderNo": 113,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "PortalPermissions",
+      "Text": "PortalPermissions",
+      "Tooltip": "PortalPermissions",
+      "ActionName": "/UserManagerModulePortalPermissions/List",
+      "OrderNo": 114,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "PortalPermissionTypes",
+      "Text": "PortalPermissionTypes",
+      "Tooltip": "PortalPermissionTypes",
+      "ActionName": "/UserManagerModulePortalPermissionTypes/List",
+      "OrderNo": 115,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "RefreshTokens",
+      "Text": "RefreshTokens",
+      "Tooltip": "RefreshTokens",
+      "ActionName": "/UserManagerModuleRefreshTokens/List",
+      "OrderNo": 116,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "TableComboboxSettings",
+      "Text": "TableComboboxSettings",
+      "Tooltip": "TableComboboxSettings",
+      "ActionName": "/UserManagerModuleTableComboboxSettings/List",
+      "OrderNo": 117,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "EmailManagerModule",
+      "Text": "EmailManagerModule",
+      "Tooltip": "EmailManagerModule",
+      "ActionName": "",
+      "OrderNo": 118,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "CampaignMessages",
+      "Text": "CampaignMessages",
+      "Tooltip": "CampaignMessages",
+      "ActionName": "/EmailManagerModuleCampaignMessages/List",
+      "OrderNo": 118,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "CampaignTypes",
+      "Text": "CampaignTypes",
+      "Tooltip": "CampaignTypes",
+      "ActionName": "/EmailManagerModuleCampaignTypes/List",
+      "OrderNo": 119,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "EmailSenders",
+      "Text": "EmailSenders",
+      "Tooltip": "EmailSenders",
+      "ActionName": "/EmailManagerModuleEmailSenders/List",
+      "OrderNo": 120,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "InfoMessages",
+      "Text": "InfoMessages",
+      "Tooltip": "InfoMessages",
+      "ActionName": "/EmailManagerModuleInfoMessages/List",
+      "OrderNo": 121,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "InfoTypes",
+      "Text": "InfoTypes",
+      "Tooltip": "InfoTypes",
+      "ActionName": "/EmailManagerModuleInfoTypes/List",
+      "OrderNo": 122,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "OtpMessages",
+      "Text": "OtpMessages",
+      "Tooltip": "OtpMessages",
+      "ActionName": "/EmailManagerModuleOtpMessages/List",
+      "OrderNo": 123,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "OtpTypes",
+      "Text": "OtpTypes",
+      "Tooltip": "OtpTypes",
+      "ActionName": "/EmailManagerModuleOtpTypes/List",
+      "OrderNo": 124,
+      "ParentName": "EmailManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "SmsManagerModule",
+      "Text": "SmsManagerModule",
+      "Tooltip": "SmsManagerModule",
+      "ActionName": "",
+      "OrderNo": 125,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "CampaignMessages",
+      "Text": "CampaignMessages",
+      "Tooltip": "CampaignMessages",
+      "ActionName": "/SmsManagerModuleCampaignMessages/List",
+      "OrderNo": 125,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "CampaignTypes",
+      "Text": "CampaignTypes",
+      "Tooltip": "CampaignTypes",
+      "ActionName": "/SmsManagerModuleCampaignTypes/List",
+      "OrderNo": 126,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "InfoMessages",
+      "Text": "InfoMessages",
+      "Tooltip": "InfoMessages",
+      "ActionName": "/SmsManagerModuleInfoMessages/List",
+      "OrderNo": 127,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "InfoTypes",
+      "Text": "InfoTypes",
+      "Tooltip": "InfoTypes",
+      "ActionName": "/SmsManagerModuleInfoTypes/List",
+      "OrderNo": 128,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "OtpMessages",
+      "Text": "OtpMessages",
+      "Tooltip": "OtpMessages",
+      "ActionName": "/SmsManagerModuleOtpMessages/List",
+      "OrderNo": 129,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "OtpTypes",
+      "Text": "OtpTypes",
+      "Tooltip": "OtpTypes",
+      "ActionName": "/SmsManagerModuleOtpTypes/List",
+      "OrderNo": 130,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    },
+    {
+      "Name": "SmsSenders",
+      "Text": "SmsSenders",
+      "Tooltip": "SmsSenders",
+      "ActionName": "/SmsManagerModuleSmsSenders/List",
+      "OrderNo": 131,
+      "ParentName": "SmsManagerModule",
+      "ItemType": "G"
+    }
+  ],
+  "TableComboboxSettings": [
+    {
+      "TableName": "ApiMethodDefinitions",
+      "IdColumn": "Id",
+      "TextColumns": "HttpMethod|Path",
+      "StringFormat": "{0} - {1}"
+    },
+    {
+      "TableName": "PermissionGroups",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "AspNetRoles",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "AspNetUsers",
+      "IdColumn": "Id",
+      "TextColumns": "Id|FirstName|LastName",
+      "StringFormat": "{0} - {1} {2}"
+    },
+    {
+      "TableName": "PortalPermissionTypes",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "PortalPermissions",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "EmailSenders",
+      "IdColumn": "Id",
+      "TextColumns": "GsmNumber",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "CampaignTypes",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "InfoTypes",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "OtpTypes",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "SmsSenders",
+      "IdColumn": "Id",
+      "TextColumns": "GsmNumber",
+      "StringFormat": "{0}"
+    }
+  ],
+  "PortalPermissionGroups": [
+    {
+      "PortalPermissionId": 1,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 1,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 1,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 1,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 1,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 1,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 1,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 2,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 2,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 2,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 2,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 2,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 2,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 2,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 3,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 3,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 3,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 3,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 3,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 3,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 3,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 4,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 4,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 4,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 4,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 4,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 4,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 4,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 5,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 5,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 5,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 5,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 5,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 5,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 5,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 6,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 6,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 6,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 6,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 6,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 6,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 6,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 7,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 7,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 7,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 7,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 7,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 7,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 7,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 8,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 8,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 8,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 8,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 8,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 8,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 8,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 9,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 9,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 9,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 9,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 9,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 9,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 9,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 10,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 10,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 10,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 10,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 10,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 10,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 10,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 11,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 11,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 11,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 11,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 11,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 11,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 11,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 12,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 12,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 12,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 12,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 12,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 12,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 12,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 13,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 13,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 13,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 13,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 13,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 13,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 13,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 14,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 14,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 14,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 14,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 14,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 14,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 14,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 15,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 15,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 15,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 15,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 15,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 15,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 15,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 16,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 16,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 16,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 16,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 16,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 16,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 16,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 17,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 17,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 17,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 17,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 17,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 17,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 17,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 18,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 18,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 18,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 18,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 18,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 18,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 18,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 19,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 19,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 19,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 19,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 19,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 19,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 19,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 20,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 20,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 20,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 20,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 20,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 20,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 20,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 21,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 21,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 21,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 21,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 21,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 21,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 21,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 22,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 22,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 22,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 22,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 22,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 22,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 22,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 23,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 23,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 23,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 23,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 23,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 23,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 23,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 24,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 24,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 24,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 24,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 24,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 24,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 24,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 25,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 25,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 25,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 25,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 25,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 25,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 25,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 26,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 26,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 26,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 26,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 26,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 26,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 26,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 27,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 27,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 27,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 27,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 27,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 27,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 27,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 28,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 28,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 28,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 28,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 28,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 28,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 28,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 29,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 29,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 29,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 29,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 29,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 29,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 29,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 30,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 30,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 30,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 30,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 30,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 30,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 30,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 31,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 31,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 31,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 31,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 31,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 31,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 31,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 32,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 32,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 32,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 32,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 32,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 32,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 32,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    }
+  ]
+}

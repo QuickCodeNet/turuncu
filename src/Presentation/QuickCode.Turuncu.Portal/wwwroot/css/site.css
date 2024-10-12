@@ -1,0 +1,134 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 0px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+
+.rectangle_radius {
+	height: 60px;
+	padding-right: 20px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	background: #3b488e;
+}
+
+.rectangle_radius_text {
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.rectangle_border_text {
+	font-weight: bold;
+	text-align: center;
+	color: #3b488e;
+}
+
+.rectangle_radius_driver {
+	height: 60px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	background: #ff740e;
+}
+
+.rectangle_radius_driver_text {
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.rectangle_border_driver_text {
+	font-weight: bold;
+	text-align: center;
+	color: #ff740e;
+}
+
+.rectangle_border {
+	height: 60px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	border-style: solid;
+	border-color: #3b488e;
+	color: #3b488e;
+}
+
+.rectangle_border_driver {
+	height: 60px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	border-style: solid;
+	border-color: #ff740e;
+	color: #ff740e;
+}
+
+.thin-tab-item {
+	height: 30px;
+	padding: 4px;
+	padding-left: 15px;
+	padding-right: 15px;
+}

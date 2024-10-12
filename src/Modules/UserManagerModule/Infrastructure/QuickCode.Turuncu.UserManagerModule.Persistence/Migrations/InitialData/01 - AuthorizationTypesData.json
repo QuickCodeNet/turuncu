@@ -1,0 +1,23 @@
+{
+"PortalPermissionTypes": [
+	{
+		"Id" : 0,
+		"Name" : "List"
+	},
+	{
+		"Id" : 1,
+		"Name" : "Detail"
+	},
+	{
+		"Id" : 2,
+		"Name" : "Insert"
+	},
+	{
+		"Id" : 3,
+		"Name" : "Delete"
+	},
+	{
+		"Id" : 4,
+		"Name" : "Update"
+	}
+]}

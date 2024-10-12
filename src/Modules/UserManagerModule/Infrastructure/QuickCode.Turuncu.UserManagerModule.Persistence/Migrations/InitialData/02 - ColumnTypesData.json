@@ -1,0 +1,143 @@
+{
+"ColumnTypes": [
+	{
+		"Id" : 1,
+		"TypeName" : "INTEGER",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldInteger",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 2,
+		"TypeName" : "DATETIME",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldDate",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 3,
+		"TypeName" : "https:\/\/www.quickcode.net\/img\/skins\/logo_s1.png",
+		"IosComponentName" : "TableViewRowImageItem",
+		"IosType" : "https:\/\/www.quickcode.net\/img\/skins\/logo_s1.png",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 4,
+		"TypeName" : "STRING",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 5,
+		"TypeName" : "LARGE_STRING",
+		"IosComponentName" : "TableViewRowRichTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 6,
+		"TypeName" : "SHORT_STRING",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 7,
+		"TypeName" : "BOOLEAN",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldOptional",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 8,
+		"TypeName" : "BIG_INTEGER",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldInteger",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 9,
+		"TypeName" : "SMALL_INTEGER",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldInteger",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 10,
+		"TypeName" : "MONEY",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldAmount",
+		"IconCode" : "fa-money-bill-alt"
+	},
+	{
+		"Id" : 11,
+		"TypeName" : "PHONE",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldPhone",
+		"IconCode" : "fa-mobile-alt"
+	},
+	{
+		"Id" : 12,
+		"TypeName" : "EMAIL",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldEmail",
+		"IconCode" : "fa-at"
+	},
+	{
+		"Id" : 13,
+		"TypeName" : "ADDRESS",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 14,
+		"TypeName" : "URL",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 15,
+		"TypeName" : "JSON",
+		"IosComponentName" : "TableViewRowRichTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 16,
+		"TypeName" : "HTML",
+		"IosComponentName" : "TableViewRowRichTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 17,
+		"TypeName" : "BLOB_IMAGE",
+		"IosComponentName" : "TableViewRowImageItem",
+		"IosType" : "https:\/\/www.quickcode.net\/img\/skins\/logo_s1.png",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 18,
+		"TypeName" : "BIG_STRING",
+		"IosComponentName" : "TableViewRowRichTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 19,
+		"TypeName" : "DECIMAL_DEGREE",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldAmount",
+		"IconCode" : "fa-money-bill-alt"
+	},
+	{
+		"Id" : 20,
+		"TypeName" : "DECIMAL_18_8",
+		"IosComponentName" : "TableViewRowTextFieldItem",
+		"IosType" : "TextFieldAmount",
+		"IconCode" : "fa-money-bill-alt"
+	}
+]}

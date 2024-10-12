@@ -1,0 +1,14 @@
+@{
+    string errorCode = ViewBag.ErrorCode;
+    string errorMessage = ViewBag.ErrorMessage;
+    string errorDescription = ViewBag.ErrorDescription;
+    ViewBag.Title = $"{errorCode} - {errorMessage}";
+    Layout = ViewBag.Layout;
+}
+<div class="container-fluid">
+    <div class="card text shadow mb-4 p-4 mt-4 text-center">
+        <span class="display-1 mt-5 font-weight-bold pt-2" style="font-size: 15rem;">@errorCode</span>
+        <span class="display-4 font-weight-bold">@errorMessage</span>
+        <span class="display-4 m-5 ">@errorDescription</span>
+    </div>
+</div>

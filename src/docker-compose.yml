@@ -1,0 +1,106 @@
+services:
+  turuncu-pg-data:
+    container_name: "turuncu-pg-data"
+    image: postgres
+
+  turuncu-sql-data:
+    container_name: "turuncu-sql-data"
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    
+  turuncu-mysql-data:
+    container_name: "turuncu-mysql-data"
+    image: mysql:8.3
+
+  elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:8.11.0
+
+  quickcode-turuncu-gateway-api:
+    container_name: "quickcode-turuncu-gateway-api"
+    image: ${DOCKER_REGISTRY-}quickcode-turuncu-gateway-api
+    build:
+      context: .
+      dockerfile: Presentation/QuickCode.Turuncu.Gateway/Dockerfile
+
+  quickcode-turuncu-user-manager-module-api:
+    container_name: "quickcode-turuncu-user-manager-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-turuncu-user-manager-module-api
+    build:
+      context: . 
+      dockerfile: Modules/UserManagerModule/Presentation/QuickCode.Turuncu.UserManagerModule.Api/Dockerfile
+    depends_on:
+      - turuncu-sql-data
+      - turuncu-pg-data
+      
+
+  quickcode-turuncu-email-manager-module-api:
+    container_name: "quickcode-turuncu-email-manager-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-turuncu-email-manager-module-api
+    build:
+      context: . 
+      dockerfile: Modules/EmailManagerModule/Presentation/QuickCode.Turuncu.EmailManagerModule.Api/Dockerfile
+    depends_on:
+      - turuncu-sql-data
+      - turuncu-pg-data
+      
+
+  quickcode-turuncu-sms-manager-module-api:
+    container_name: "quickcode-turuncu-sms-manager-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-turuncu-sms-manager-module-api
+    build:
+      context: . 
+      dockerfile: Modules/SmsManagerModule/Presentation/QuickCode.Turuncu.SmsManagerModule.Api/Dockerfile
+    depends_on:
+      - turuncu-sql-data
+      - turuncu-pg-data
+      
+
+#[-WEB-]
+  
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    container_name: kafdrop
+    ports:
+      - 9000:9000
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BROKERCONNECT: kafka:9092
+        
+  quickcode-turuncu-portal:
+    container_name: "quickcode-turuncu-portal"
+    image: ${DOCKER_REGISTRY-}quickcode-turuncu-portal
+    build:
+      context: .
+      dockerfile: Presentation/QuickCode.Turuncu.Portal/Dockerfile
+      
+  quickcode-turuncu-event-listener-service:
+    container_name: "quickcode-turuncu-event-listener-service"
+    image: ${DOCKER_REGISTRY-}quickcode-turuncu-event-listener-service
+    build:
+      context: .
+      dockerfile: Services/QuickCode.Turuncu.EventListenerService/Dockerfile

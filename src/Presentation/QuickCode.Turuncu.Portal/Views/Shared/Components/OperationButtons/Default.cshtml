@@ -1,0 +1,24 @@
+@model ViewPermissionItemData
+@if ((Model.Item.Detail || Model.Item.Update || Model.Item.Delete) && Model.ItemId == "Header")
+{
+    <th>Operations</th>
+}
+else if (Model.Item.Detail || Model.Item.Update || Model.Item.Delete)
+{
+    <td scope="row" style="width:150px">
+        <button-group>
+            @if (Model.Item.Detail)
+            {
+                <button type="button" id="DetailItem_@Model.ItemId" class="opButtonDetail" bc-color="Primary" bc-tooltip="Detail" bc-size="Small"><i class="fas fa-eye"></i>      </button>
+            }
+            @if (Model.Item.Update)
+            {
+                <button type="button" id="UpdateItem_@Model.ItemId" class="opButtonUpdate" bc-color="Warning" bc-tooltip="Update" bc-size="Small"><i class="fas fa-edit"></i>     </button>
+            }
+            @if (Model.Item.Delete)
+            {
+                <button type="button" id="DeleteItem_@Model.ItemId" class="opButtonDelete" bc-color="Danger" bc-tooltip="Delete" bc-size="Small"><i class="fas fa-trash-alt"></i></button>
+            }
+        </button-group>
+    </td>
+}

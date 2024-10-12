@@ -1,0 +1,18 @@
+@using QuickCode.Turuncu.Portal;
+@using QuickCode.Turuncu.Portal.Models
+@using QuickCode.Turuncu.Portal.Helpers
+@using QuickCode.Turuncu.Portal.ViewComponents
+@using BSolutions.Bocons.Enumerations
+@using BSolutions.Brecons.Core.Enumerations
+@using QuickCode.Turuncu.Common.Helpers
+@using UserManagerModuleApi = QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
+@using EmailManagerModuleApi = QuickCode.Turuncu.Common.Nswag.Clients.EmailManagerModuleApi.Contracts
+@using SmsManagerModuleApi = QuickCode.Turuncu.Common.Nswag.Clients.SmsManagerModuleApi.Contracts
+@using UserManagerModule = QuickCode.Turuncu.Portal.Models.UserManagerModule
+@using EmailManagerModule = QuickCode.Turuncu.Portal.Models.EmailManagerModule
+@using SmsManagerModule = QuickCode.Turuncu.Portal.Models.SmsManagerModule
+
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, BSolutions.Bocons
+@addTagHelper *, QuickCode.Turuncu.Portal

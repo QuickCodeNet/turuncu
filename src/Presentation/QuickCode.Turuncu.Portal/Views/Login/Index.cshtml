@@ -1,0 +1,45 @@
+@model LoginData
+@{
+var queryCollection = Context.Request.Query;
+var routeData = new Dictionary<string, string>(queryCollection.Select(x => new KeyValuePair<string, string>(x.Key, x.Value!)));
+}
+<div class="row">
+    <div class="col-lg-6  d-lg-block bg-login-image"></div>
+    <div class="col-lg-6">
+        <div class="p-5">
+            <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+            </div>
+            <form class="user" asp-action="Index" asp-all-route-data="routeData" >
+                <div class="form-group">
+                    <input type="text"  asp-for="Username" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Enter Email Address..." />
+                </div>
+                <div class="form-group">
+                    <input type="password" asp-for="Password" class="form-control form-control-user" autocomplete="on" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck" />
+                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-user btn-block">
+                    Login
+                </button>
+                <br />
+                <div class="text-center">
+                    <h1 class="h6 text-red-900 mt-1" style="color: red">@Model.ErrorMessage</h1>
+                </div>
+                <br />
+                <br />
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" href="forgot-password.html">Forgot Password?</a>
+            </div>
+            <div class="text-center">
+                <a class="small" href="register.html">Create an Account!</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+"PermissionGroups": [
+	{
+		"Id" : 1,
+		"Name" : "Admin"
+	},
+	{
+		"Id" : 2,
+		"Name" : "Viewer"
+	}
+]}

@@ -1,0 +1,1873 @@
+{
+"ApiMethodDefinitions": [
+  {
+    "Id": 1,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalMenusController",
+    "Path": "/api/user-manager-module/portal-menus",
+    "ItemType": "M"
+  },
+  {
+    "Id": 2,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalMenusController",
+    "Path": "/api/user-manager-module/portal-menus/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 3,
+    "HttpMethod": "POST",
+    "ControllerName": "PortalMenusController",
+    "Path": "/api/user-manager-module/portal-menus",
+    "ItemType": "M"
+  },
+  {
+    "Id": 4,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalMenusController",
+    "Path": "/api/user-manager-module/portal-menus/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 5,
+    "HttpMethod": "PUT",
+    "ControllerName": "PortalMenusController",
+    "Path": "/api/user-manager-module/portal-menus/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 6,
+    "HttpMethod": "DELETE",
+    "ControllerName": "PortalMenusController",
+    "Path": "/api/user-manager-module/portal-menus/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 7,
+    "HttpMethod": "GET",
+    "ControllerName": "ColumnTypesController",
+    "Path": "/api/user-manager-module/column-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 8,
+    "HttpMethod": "GET",
+    "ControllerName": "ColumnTypesController",
+    "Path": "/api/user-manager-module/column-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 9,
+    "HttpMethod": "POST",
+    "ControllerName": "ColumnTypesController",
+    "Path": "/api/user-manager-module/column-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 10,
+    "HttpMethod": "GET",
+    "ControllerName": "ColumnTypesController",
+    "Path": "/api/user-manager-module/column-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 11,
+    "HttpMethod": "PUT",
+    "ControllerName": "ColumnTypesController",
+    "Path": "/api/user-manager-module/column-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 12,
+    "HttpMethod": "DELETE",
+    "ControllerName": "ColumnTypesController",
+    "Path": "/api/user-manager-module/column-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 13,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types/{portalPermissionTypesId}/portal-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 14,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types/{portalPermissionTypesId}/portal-permission-groups/{portalPermissionGroupsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 15,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 16,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 17,
+    "HttpMethod": "POST",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 18,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 19,
+    "HttpMethod": "PUT",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 20,
+    "HttpMethod": "DELETE",
+    "ControllerName": "PortalPermissionTypesController",
+    "Path": "/api/user-manager-module/portal-permission-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 21,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/{portalPermissionsId}/portal-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 22,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/{portalPermissionsId}/portal-permission-groups/{portalPermissionGroupsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 23,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions",
+    "ItemType": "M"
+  },
+  {
+    "Id": 24,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 25,
+    "HttpMethod": "POST",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions",
+    "ItemType": "M"
+  },
+  {
+    "Id": 26,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 27,
+    "HttpMethod": "PUT",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 28,
+    "HttpMethod": "DELETE",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 29,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/{apiMethodDefinitionsId}/kafka-events",
+    "ItemType": "M"
+  },
+  {
+    "Id": 30,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/{apiMethodDefinitionsId}/kafka-events/{kafkaEventsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 31,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/{apiMethodDefinitionsId}/api-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 32,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/{apiMethodDefinitionsId}/api-permission-groups/{apiPermissionGroupsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 33,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions",
+    "ItemType": "M"
+  },
+  {
+    "Id": 34,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 35,
+    "HttpMethod": "POST",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions",
+    "ItemType": "M"
+  },
+  {
+    "Id": 36,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 37,
+    "HttpMethod": "PUT",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 38,
+    "HttpMethod": "DELETE",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 39,
+    "HttpMethod": "GET",
+    "ControllerName": "KafkaEventsController",
+    "Path": "/api/user-manager-module/kafka-events/get-kafka-events",
+    "ItemType": "M"
+  },
+  {
+    "Id": 40,
+    "HttpMethod": "GET",
+    "ControllerName": "KafkaEventsController",
+    "Path": "/api/user-manager-module/kafka-events",
+    "ItemType": "M"
+  },
+  {
+    "Id": 41,
+    "HttpMethod": "GET",
+    "ControllerName": "KafkaEventsController",
+    "Path": "/api/user-manager-module/kafka-events/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 42,
+    "HttpMethod": "POST",
+    "ControllerName": "KafkaEventsController",
+    "Path": "/api/user-manager-module/kafka-events",
+    "ItemType": "M"
+  },
+  {
+    "Id": 43,
+    "HttpMethod": "GET",
+    "ControllerName": "KafkaEventsController",
+    "Path": "/api/user-manager-module/kafka-events/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 44,
+    "HttpMethod": "PUT",
+    "ControllerName": "KafkaEventsController",
+    "Path": "/api/user-manager-module/kafka-events/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 45,
+    "HttpMethod": "DELETE",
+    "ControllerName": "KafkaEventsController",
+    "Path": "/api/user-manager-module/kafka-events/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 46,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups/get-api-permission-groups/{apiPermissionGroupsPermissionGroupId:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 47,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups/get-api-permission-group/{apiPermissionGroupsPermissionGroupId:int}/{apiPermissionGroupsApiMethodDefinitionId:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 48,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 49,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 50,
+    "HttpMethod": "POST",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 51,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 52,
+    "HttpMethod": "PUT",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 53,
+    "HttpMethod": "DELETE",
+    "ControllerName": "ApiPermissionGroupsController",
+    "Path": "/api/user-manager-module/api-permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 54,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups/get-portal-permission-groups/{portalPermissionGroupsPermissionGroupId:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 55,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups/get-portal-permission-group/{portalPermissionGroupsPortalPermissionId:int}/{portalPermissionGroupsPermissionGroupId:int}/{portalPermissionGroupsPortalPermissionTypeId:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 56,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 57,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 58,
+    "HttpMethod": "POST",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 59,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 60,
+    "HttpMethod": "PUT",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 61,
+    "HttpMethod": "DELETE",
+    "ControllerName": "PortalPermissionGroupsController",
+    "Path": "/api/user-manager-module/portal-permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 62,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{permissionGroupsId}/asp-net-users",
+    "ItemType": "M"
+  },
+  {
+    "Id": 63,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{permissionGroupsId}/asp-net-users/{aspNetUsersId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 64,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{permissionGroupsId}/portal-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 65,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{permissionGroupsId}/portal-permission-groups/{portalPermissionGroupsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 66,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{permissionGroupsId}/api-permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 67,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{permissionGroupsId}/api-permission-groups/{apiPermissionGroupsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 68,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 69,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 70,
+    "HttpMethod": "POST",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups",
+    "ItemType": "M"
+  },
+  {
+    "Id": 71,
+    "HttpMethod": "GET",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 72,
+    "HttpMethod": "PUT",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 73,
+    "HttpMethod": "DELETE",
+    "ControllerName": "PermissionGroupsController",
+    "Path": "/api/user-manager-module/permission-groups/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 74,
+    "HttpMethod": "GET",
+    "ControllerName": "TableComboboxSettingsController",
+    "Path": "/api/user-manager-module/table-combobox-settings",
+    "ItemType": "M"
+  },
+  {
+    "Id": 75,
+    "HttpMethod": "GET",
+    "ControllerName": "TableComboboxSettingsController",
+    "Path": "/api/user-manager-module/table-combobox-settings/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 76,
+    "HttpMethod": "POST",
+    "ControllerName": "TableComboboxSettingsController",
+    "Path": "/api/user-manager-module/table-combobox-settings",
+    "ItemType": "M"
+  },
+  {
+    "Id": 77,
+    "HttpMethod": "GET",
+    "ControllerName": "TableComboboxSettingsController",
+    "Path": "/api/user-manager-module/table-combobox-settings/{tableName}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 78,
+    "HttpMethod": "PUT",
+    "ControllerName": "TableComboboxSettingsController",
+    "Path": "/api/user-manager-module/table-combobox-settings/{tableName}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 79,
+    "HttpMethod": "DELETE",
+    "ControllerName": "TableComboboxSettingsController",
+    "Path": "/api/user-manager-module/table-combobox-settings/{tableName}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 80,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/{aspNetRolesId}/asp-net-user-roles",
+    "ItemType": "M"
+  },
+  {
+    "Id": 81,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/{aspNetRolesId}/asp-net-user-roles/{aspNetUserRolesUserId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 82,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/{aspNetRolesId}/asp-net-role-claims",
+    "ItemType": "M"
+  },
+  {
+    "Id": 83,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/{aspNetRolesId}/asp-net-role-claims/{aspNetRoleClaimsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 84,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles",
+    "ItemType": "M"
+  },
+  {
+    "Id": 85,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 86,
+    "HttpMethod": "POST",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles",
+    "ItemType": "M"
+  },
+  {
+    "Id": 87,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/{id}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 88,
+    "HttpMethod": "PUT",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/{id}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 89,
+    "HttpMethod": "DELETE",
+    "ControllerName": "AspNetRolesController",
+    "Path": "/api/user-manager-module/asp-net-roles/{id}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 90,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/get-user/{aspNetUsersEmail}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 91,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-roles",
+    "ItemType": "M"
+  },
+  {
+    "Id": 92,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-roles/{aspNetUserRolesUserId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 93,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-claims",
+    "ItemType": "M"
+  },
+  {
+    "Id": 94,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-claims/{aspNetUserClaimsId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 95,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-tokens",
+    "ItemType": "M"
+  },
+  {
+    "Id": 96,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-tokens/{aspNetUserTokensUserId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 97,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-logins",
+    "ItemType": "M"
+  },
+  {
+    "Id": 98,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/asp-net-user-logins/{aspNetUserLoginsLoginProvider}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 99,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/refresh-tokens",
+    "ItemType": "M"
+  },
+  {
+    "Id": 100,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{aspNetUsersId}/refresh-tokens/{refreshTokensId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 101,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users",
+    "ItemType": "M"
+  },
+  {
+    "Id": 102,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 103,
+    "HttpMethod": "POST",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users",
+    "ItemType": "M"
+  },
+  {
+    "Id": 104,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{id}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 105,
+    "HttpMethod": "PUT",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{id}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 106,
+    "HttpMethod": "DELETE",
+    "ControllerName": "AspNetUsersController",
+    "Path": "/api/user-manager-module/asp-net-users/{id}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 107,
+    "HttpMethod": "GET",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens/get-refresh-token/{refreshTokensToken}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 108,
+    "HttpMethod": "PATCH",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens/update-refresh-token/{refreshTokensToken}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 109,
+    "HttpMethod": "GET",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens",
+    "ItemType": "M"
+  },
+  {
+    "Id": 110,
+    "HttpMethod": "GET",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 111,
+    "HttpMethod": "POST",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens",
+    "ItemType": "M"
+  },
+  {
+    "Id": 112,
+    "HttpMethod": "GET",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 113,
+    "HttpMethod": "PUT",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 114,
+    "HttpMethod": "DELETE",
+    "ControllerName": "RefreshTokensController",
+    "Path": "/api/user-manager-module/refresh-tokens/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 115,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRoleClaimsController",
+    "Path": "/api/user-manager-module/asp-net-role-claims",
+    "ItemType": "M"
+  },
+  {
+    "Id": 116,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRoleClaimsController",
+    "Path": "/api/user-manager-module/asp-net-role-claims/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 117,
+    "HttpMethod": "POST",
+    "ControllerName": "AspNetRoleClaimsController",
+    "Path": "/api/user-manager-module/asp-net-role-claims",
+    "ItemType": "M"
+  },
+  {
+    "Id": 118,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetRoleClaimsController",
+    "Path": "/api/user-manager-module/asp-net-role-claims/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 119,
+    "HttpMethod": "PUT",
+    "ControllerName": "AspNetRoleClaimsController",
+    "Path": "/api/user-manager-module/asp-net-role-claims/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 120,
+    "HttpMethod": "DELETE",
+    "ControllerName": "AspNetRoleClaimsController",
+    "Path": "/api/user-manager-module/asp-net-role-claims/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 121,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserClaimsController",
+    "Path": "/api/user-manager-module/asp-net-user-claims",
+    "ItemType": "M"
+  },
+  {
+    "Id": 122,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserClaimsController",
+    "Path": "/api/user-manager-module/asp-net-user-claims/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 123,
+    "HttpMethod": "POST",
+    "ControllerName": "AspNetUserClaimsController",
+    "Path": "/api/user-manager-module/asp-net-user-claims",
+    "ItemType": "M"
+  },
+  {
+    "Id": 124,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserClaimsController",
+    "Path": "/api/user-manager-module/asp-net-user-claims/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 125,
+    "HttpMethod": "PUT",
+    "ControllerName": "AspNetUserClaimsController",
+    "Path": "/api/user-manager-module/asp-net-user-claims/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 126,
+    "HttpMethod": "DELETE",
+    "ControllerName": "AspNetUserClaimsController",
+    "Path": "/api/user-manager-module/asp-net-user-claims/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 127,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserLoginsController",
+    "Path": "/api/user-manager-module/asp-net-user-logins",
+    "ItemType": "M"
+  },
+  {
+    "Id": 128,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserLoginsController",
+    "Path": "/api/user-manager-module/asp-net-user-logins/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 129,
+    "HttpMethod": "POST",
+    "ControllerName": "AspNetUserLoginsController",
+    "Path": "/api/user-manager-module/asp-net-user-logins",
+    "ItemType": "M"
+  },
+  {
+    "Id": 130,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserLoginsController",
+    "Path": "/api/user-manager-module/asp-net-user-logins/{loginProvider}/{providerKey}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 131,
+    "HttpMethod": "PUT",
+    "ControllerName": "AspNetUserLoginsController",
+    "Path": "/api/user-manager-module/asp-net-user-logins/{loginProvider}/{providerKey}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 132,
+    "HttpMethod": "DELETE",
+    "ControllerName": "AspNetUserLoginsController",
+    "Path": "/api/user-manager-module/asp-net-user-logins/{loginProvider}/{providerKey}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 133,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserRolesController",
+    "Path": "/api/user-manager-module/asp-net-user-roles",
+    "ItemType": "M"
+  },
+  {
+    "Id": 134,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserRolesController",
+    "Path": "/api/user-manager-module/asp-net-user-roles/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 135,
+    "HttpMethod": "POST",
+    "ControllerName": "AspNetUserRolesController",
+    "Path": "/api/user-manager-module/asp-net-user-roles",
+    "ItemType": "M"
+  },
+  {
+    "Id": 136,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserRolesController",
+    "Path": "/api/user-manager-module/asp-net-user-roles/{userId}/{roleId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 137,
+    "HttpMethod": "PUT",
+    "ControllerName": "AspNetUserRolesController",
+    "Path": "/api/user-manager-module/asp-net-user-roles/{userId}/{roleId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 138,
+    "HttpMethod": "DELETE",
+    "ControllerName": "AspNetUserRolesController",
+    "Path": "/api/user-manager-module/asp-net-user-roles/{userId}/{roleId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 139,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserTokensController",
+    "Path": "/api/user-manager-module/asp-net-user-tokens",
+    "ItemType": "M"
+  },
+  {
+    "Id": 140,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserTokensController",
+    "Path": "/api/user-manager-module/asp-net-user-tokens/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 141,
+    "HttpMethod": "POST",
+    "ControllerName": "AspNetUserTokensController",
+    "Path": "/api/user-manager-module/asp-net-user-tokens",
+    "ItemType": "M"
+  },
+  {
+    "Id": 142,
+    "HttpMethod": "GET",
+    "ControllerName": "AspNetUserTokensController",
+    "Path": "/api/user-manager-module/asp-net-user-tokens/{userId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 143,
+    "HttpMethod": "PUT",
+    "ControllerName": "AspNetUserTokensController",
+    "Path": "/api/user-manager-module/asp-net-user-tokens/{userId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 144,
+    "HttpMethod": "DELETE",
+    "ControllerName": "AspNetUserTokensController",
+    "Path": "/api/user-manager-module/asp-net-user-tokens/{userId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 145,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/email-manager-module/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 146,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/email-manager-module/info-messages/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 147,
+    "HttpMethod": "POST",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/email-manager-module/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 148,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/email-manager-module/info-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 149,
+    "HttpMethod": "PUT",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/email-manager-module/info-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 150,
+    "HttpMethod": "DELETE",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/email-manager-module/info-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 151,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/email-manager-module/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 152,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/email-manager-module/campaign-messages/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 153,
+    "HttpMethod": "POST",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/email-manager-module/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 154,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/email-manager-module/campaign-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 155,
+    "HttpMethod": "PUT",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/email-manager-module/campaign-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 156,
+    "HttpMethod": "DELETE",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/email-manager-module/campaign-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 157,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/email-manager-module/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 158,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/email-manager-module/otp-messages/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 159,
+    "HttpMethod": "POST",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/email-manager-module/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 160,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/email-manager-module/otp-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 161,
+    "HttpMethod": "PUT",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/email-manager-module/otp-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 162,
+    "HttpMethod": "DELETE",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/email-manager-module/otp-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 163,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types/{otpTypesId}/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 164,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types/{otpTypesId}/otp-messages/{otpMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 165,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 166,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 167,
+    "HttpMethod": "POST",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 168,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 169,
+    "HttpMethod": "PUT",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 170,
+    "HttpMethod": "DELETE",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/email-manager-module/otp-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 171,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types/{infoTypesId}/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 172,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types/{infoTypesId}/info-messages/{infoMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 173,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 174,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 175,
+    "HttpMethod": "POST",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 176,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 177,
+    "HttpMethod": "PUT",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 178,
+    "HttpMethod": "DELETE",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/email-manager-module/info-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 179,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types/{campaignTypesId}/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 180,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types/{campaignTypesId}/campaign-messages/{campaignMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 181,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 182,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 183,
+    "HttpMethod": "POST",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 184,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 185,
+    "HttpMethod": "PUT",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 186,
+    "HttpMethod": "DELETE",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/email-manager-module/campaign-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 187,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{emailSendersId}/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 188,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{emailSendersId}/info-messages/{infoMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 189,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{emailSendersId}/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 190,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{emailSendersId}/otp-messages/{otpMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 191,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{emailSendersId}/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 192,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{emailSendersId}/campaign-messages/{campaignMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 193,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders",
+    "ItemType": "M"
+  },
+  {
+    "Id": 194,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 195,
+    "HttpMethod": "POST",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders",
+    "ItemType": "M"
+  },
+  {
+    "Id": 196,
+    "HttpMethod": "GET",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 197,
+    "HttpMethod": "PUT",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 198,
+    "HttpMethod": "DELETE",
+    "ControllerName": "EmailSendersController",
+    "Path": "/api/email-manager-module/email-senders/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 199,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/sms-manager-module/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 200,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/sms-manager-module/info-messages/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 201,
+    "HttpMethod": "POST",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/sms-manager-module/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 202,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/sms-manager-module/info-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 203,
+    "HttpMethod": "PUT",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/sms-manager-module/info-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 204,
+    "HttpMethod": "DELETE",
+    "ControllerName": "InfoMessagesController",
+    "Path": "/api/sms-manager-module/info-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 205,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/sms-manager-module/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 206,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/sms-manager-module/campaign-messages/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 207,
+    "HttpMethod": "POST",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/sms-manager-module/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 208,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/sms-manager-module/campaign-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 209,
+    "HttpMethod": "PUT",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/sms-manager-module/campaign-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 210,
+    "HttpMethod": "DELETE",
+    "ControllerName": "CampaignMessagesController",
+    "Path": "/api/sms-manager-module/campaign-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 211,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/sms-manager-module/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 212,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/sms-manager-module/otp-messages/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 213,
+    "HttpMethod": "POST",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/sms-manager-module/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 214,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/sms-manager-module/otp-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 215,
+    "HttpMethod": "PUT",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/sms-manager-module/otp-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 216,
+    "HttpMethod": "DELETE",
+    "ControllerName": "OtpMessagesController",
+    "Path": "/api/sms-manager-module/otp-messages/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 217,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types/{otpTypesId}/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 218,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types/{otpTypesId}/otp-messages/{otpMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 219,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 220,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 221,
+    "HttpMethod": "POST",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 222,
+    "HttpMethod": "GET",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 223,
+    "HttpMethod": "PUT",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 224,
+    "HttpMethod": "DELETE",
+    "ControllerName": "OtpTypesController",
+    "Path": "/api/sms-manager-module/otp-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 225,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types/{infoTypesId}/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 226,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types/{infoTypesId}/info-messages/{infoMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 227,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 228,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 229,
+    "HttpMethod": "POST",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 230,
+    "HttpMethod": "GET",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 231,
+    "HttpMethod": "PUT",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 232,
+    "HttpMethod": "DELETE",
+    "ControllerName": "InfoTypesController",
+    "Path": "/api/sms-manager-module/info-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 233,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types/{campaignTypesId}/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 234,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types/{campaignTypesId}/campaign-messages/{campaignMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 235,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 236,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 237,
+    "HttpMethod": "POST",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types",
+    "ItemType": "M"
+  },
+  {
+    "Id": 238,
+    "HttpMethod": "GET",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 239,
+    "HttpMethod": "PUT",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 240,
+    "HttpMethod": "DELETE",
+    "ControllerName": "CampaignTypesController",
+    "Path": "/api/sms-manager-module/campaign-types/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 241,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{smsSendersId}/info-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 242,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{smsSendersId}/info-messages/{infoMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 243,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{smsSendersId}/otp-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 244,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{smsSendersId}/otp-messages/{otpMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 245,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{smsSendersId}/campaign-messages",
+    "ItemType": "M"
+  },
+  {
+    "Id": 246,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{smsSendersId}/campaign-messages/{campaignMessagesId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 247,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders",
+    "ItemType": "M"
+  },
+  {
+    "Id": 248,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/count",
+    "ItemType": "M"
+  },
+  {
+    "Id": 249,
+    "HttpMethod": "POST",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders",
+    "ItemType": "M"
+  },
+  {
+    "Id": 250,
+    "HttpMethod": "GET",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 251,
+    "HttpMethod": "PUT",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 252,
+    "HttpMethod": "DELETE",
+    "ControllerName": "SmsSendersController",
+    "Path": "/api/sms-manager-module/sms-senders/{id:int}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 253,
+    "HttpMethod": "GET",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/get-portal-permissions/{permissionGroupId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 254,
+    "HttpMethod": "POST",
+    "ControllerName": "PortalPermissionsController",
+    "Path": "/api/user-manager-module/portal-permissions/update-portal-permission",
+    "ItemType": "M"
+  },
+  {
+    "Id": 255,
+    "HttpMethod": "GET",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/get-api-permissions/{permissionGroupId}",
+    "ItemType": "M"
+  },
+  {
+    "Id": 256,
+    "HttpMethod": "POST",
+    "ControllerName": "ApiMethodDefinitionsController",
+    "Path": "/api/user-manager-module/api-method-definitions/update-api-permission",
+    "ItemType": "M"
+  },
+  {
+    "Id": 257,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/register",
+    "ItemType": "M"
+  },
+  {
+    "Id": 258,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/login",
+    "ItemType": "M"
+  },
+  {
+    "Id": 259,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/validate",
+    "ItemType": "M"
+  },
+  {
+    "Id": 260,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/refresh",
+    "ItemType": "M"
+  },
+  {
+    "Id": 261,
+    "HttpMethod": "GET",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/confirmEmail",
+    "ItemType": "M"
+  },
+  {
+    "Id": 262,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/resendConfirmationEmail",
+    "ItemType": "M"
+  },
+  {
+    "Id": 263,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/forgotPassword",
+    "ItemType": "M"
+  },
+  {
+    "Id": 264,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/resetPassword",
+    "ItemType": "M"
+  },
+  {
+    "Id": 265,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/manage/user2fa",
+    "ItemType": "M"
+  },
+  {
+    "Id": 266,
+    "HttpMethod": "GET",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/manage/info",
+    "ItemType": "M"
+  },
+  {
+    "Id": 267,
+    "HttpMethod": "POST",
+    "ControllerName": "AuthenticationController",
+    "Path": "/api/auth/manage/info",
+    "ItemType": "M"
+  }
+]
+}

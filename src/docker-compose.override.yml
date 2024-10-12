@@ -1,0 +1,129 @@
+services:
+  turuncu-pg-data:
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=dockerf
+    volumes:
+      - quickcode-turuncu-pg-data:/var/lib/postgresql/data
+  
+  turuncu-mysql-data:
+    ports:
+      - "3306:3306"
+    volumes:
+      - quickcode-turuncu-mysql-data:/var/lib/mysql
+      - "~/sql-scripts/setup.sql:/docker-entrypoint-initdb.d/1.sql"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootDocker!
+      - MYSQL_USER=docker
+      - MYSQL_PASSWORD=dockerf
+
+  turuncu-sql-data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - quickcode-turuncu-sql-data:/var/opt/mssql
+
+  elasticsearch:
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    deploy:
+      resources:
+        limits:
+          memory: 1GB
+    ports:
+      - "9200:9200"
+    volumes:
+      - quickcode-turuncu-elasticsearch-data:/usr/share/elasticsearch/data
+    restart: always
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    healthcheck:
+      test: curl -s http://elasticsearch:9200 >/dev/null || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kibana:
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    volumes:
+      - quickcode-turuncu-kibana-data:/usr/share/kibana/data
+    restart: always
+    depends_on:
+      - elasticsearch
+
+  quickcode-turuncu-gateway-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+    ports:
+      - "6060:80"
+
+  quickcode-turuncu-user-manager-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - QUICKCODE_JWT_SECRET_KEY=f888f637-1d00-4541-a913-e3e8ac66e46d
+    ports:
+      - "6001:80"
+
+
+  quickcode-turuncu-email-manager-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      
+    ports:
+      - "6002:80"
+
+
+  quickcode-turuncu-sms-manager-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      
+    ports:
+      - "6003:80"
+
+
+#[-WEB-]
+  quickcode-turuncu-portal:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+    ports:
+      - "6020:80"
+      
+  quickcode-turuncu-event-listener-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+    ports:
+      - "6100:80"
+      
+volumes:
+  quickcode-turuncu-pg-data:
+    external: false
+    
+  quickcode-turuncu-mysql-data:
+    external: false
+    
+  quickcode-turuncu-sql-data:
+    external: false
+    
+  quickcode-turuncu-elasticsearch-data:
+    external: false
+    
+  quickcode-turuncu-kibana-data:
+    external: false
