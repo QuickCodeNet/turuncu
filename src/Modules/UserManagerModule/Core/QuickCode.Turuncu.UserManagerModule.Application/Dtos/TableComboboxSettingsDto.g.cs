@@ -18,9 +18,6 @@ namespace QuickCode.Turuncu.UserManagerModule.Application.Dtos
     {
         public string TableName { get; init; }
         public string IdColumn { get; init; }
-        public string RefTableName { get; init; }
-        public string RefTableColumnId { get; init; }
-        public string RefIdColumn { get; init; }
         public string TextColumns { get; init; }
         public string StringFormat { get; init; }
     }

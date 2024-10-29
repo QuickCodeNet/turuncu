@@ -25,7 +25,8 @@ namespace QuickCode.Turuncu.Portal.ViewEngines
                 "/Views/Generated/{1}/{0}.cshtml",
                 "/Views/Generated/{2}/{1}/{0}.cshtml",
                 "/Views/{2}/{1}/{0}.cshtml",
-                "/Views/Defaults/{1}/{0}.cshtml"
+                "/Views/Defaults/{1}/{0}.cshtml",
+                "/Views/UserManagerModule/{1}/{0}.cshtml"
             };
 
             return locations.Union(viewLocations);

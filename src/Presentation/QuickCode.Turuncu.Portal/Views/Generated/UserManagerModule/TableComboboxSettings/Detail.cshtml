@@ -22,18 +22,6 @@
 </form-group>
 
 <form-group>
-	<input type="text" bc-label="Ref Table Name" asp-for="SelectedItem.RefTableName" bc-static="true" />
-</form-group>
-
-<form-group>
-	<input type="text" bc-label="Ref Table Column Id" asp-for="SelectedItem.RefTableColumnId" bc-static="true" />
-</form-group>
-
-<form-group>
-	<input type="text" bc-label="Ref Id Column" asp-for="SelectedItem.RefIdColumn" bc-static="true" />
-</form-group>
-
-<form-group>
 	<input type="text" bc-label="Text Columns" asp-for="SelectedItem.TextColumns" bc-static="true" />
 </form-group>
 
@@ -179,9 +167,14 @@
                 Object.keys(fileData).forEach(function(fileKey) {
                     formData.set(fileKey, fileData[fileKey]);
                 });
+                
+                addYamlEditorsToFormData(formData);
     
+                let button = document.querySelector('button[type="submit"]');
+                let formActionUrl = button.getAttribute('formaction');   
+                
                 $.ajax({
-                    url: "Detail",
+                    url: formActionUrl,
                     type: "POST",
                     dataType: "JSON",
                     data: formData,

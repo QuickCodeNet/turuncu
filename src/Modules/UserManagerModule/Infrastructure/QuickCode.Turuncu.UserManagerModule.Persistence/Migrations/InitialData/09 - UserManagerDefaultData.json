@@ -92,71 +92,76 @@
     },
     {
       "Id": 19,
-      "Name": "EmailManagerModuleCampaignMessages",
+      "Name": "UserManagerModuleTopicWorkflows",
       "ItemType": "G"
     },
     {
       "Id": 20,
-      "Name": "EmailManagerModuleCampaignTypes",
+      "Name": "EmailManagerModuleCampaignMessages",
       "ItemType": "G"
     },
     {
       "Id": 21,
-      "Name": "EmailManagerModuleEmailSenders",
+      "Name": "EmailManagerModuleCampaignTypes",
       "ItemType": "G"
     },
     {
       "Id": 22,
-      "Name": "EmailManagerModuleInfoMessages",
+      "Name": "EmailManagerModuleEmailSenders",
       "ItemType": "G"
     },
     {
       "Id": 23,
-      "Name": "EmailManagerModuleInfoTypes",
+      "Name": "EmailManagerModuleInfoMessages",
       "ItemType": "G"
     },
     {
       "Id": 24,
-      "Name": "EmailManagerModuleOtpMessages",
+      "Name": "EmailManagerModuleInfoTypes",
       "ItemType": "G"
     },
     {
       "Id": 25,
-      "Name": "EmailManagerModuleOtpTypes",
+      "Name": "EmailManagerModuleOtpMessages",
       "ItemType": "G"
     },
     {
       "Id": 26,
-      "Name": "SmsManagerModuleCampaignMessages",
+      "Name": "EmailManagerModuleOtpTypes",
       "ItemType": "G"
     },
     {
       "Id": 27,
-      "Name": "SmsManagerModuleCampaignTypes",
+      "Name": "SmsManagerModuleCampaignMessages",
       "ItemType": "G"
     },
     {
       "Id": 28,
-      "Name": "SmsManagerModuleInfoMessages",
+      "Name": "SmsManagerModuleCampaignTypes",
       "ItemType": "G"
     },
     {
       "Id": 29,
-      "Name": "SmsManagerModuleInfoTypes",
+      "Name": "SmsManagerModuleInfoMessages",
       "ItemType": "G"
     },
     {
       "Id": 30,
-      "Name": "SmsManagerModuleOtpMessages",
+      "Name": "SmsManagerModuleInfoTypes",
       "ItemType": "G"
     },
     {
       "Id": 31,
-      "Name": "SmsManagerModuleOtpTypes",
+      "Name": "SmsManagerModuleOtpMessages",
       "ItemType": "G"
     },
     {
       "Id": 32,
+      "Name": "SmsManagerModuleOtpTypes",
+      "ItemType": "G"
+    },
+    {
+      "Id": 33,
       "Name": "SmsManagerModuleSmsSenders",
       "ItemType": "G"
     }
@@ -334,11 +339,20 @@
       "ItemType": "G"
     },
     {
+      "Name": "TopicWorkflows",
+      "Text": "TopicWorkflows",
+      "Tooltip": "TopicWorkflows",
+      "ActionName": "/UserManagerModuleTopicWorkflows/List",
+      "OrderNo": 118,
+      "ParentName": "UserManagerModule",
+      "ItemType": "G"
+    },
+    {
       "Name": "EmailManagerModule",
       "Text": "EmailManagerModule",
       "Tooltip": "EmailManagerModule",
       "ActionName": "",
-      "OrderNo": 118,
+      "OrderNo": 119,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -347,7 +361,7 @@
       "Text": "CampaignMessages",
       "Tooltip": "CampaignMessages",
       "ActionName": "/EmailManagerModuleCampaignMessages/List",
-      "OrderNo": 118,
+      "OrderNo": 119,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -356,7 +370,7 @@
       "Text": "CampaignTypes",
       "Tooltip": "CampaignTypes",
       "ActionName": "/EmailManagerModuleCampaignTypes/List",
-      "OrderNo": 119,
+      "OrderNo": 120,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -365,7 +379,7 @@
       "Text": "EmailSenders",
       "Tooltip": "EmailSenders",
       "ActionName": "/EmailManagerModuleEmailSenders/List",
-      "OrderNo": 120,
+      "OrderNo": 121,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -374,7 +388,7 @@
       "Text": "InfoMessages",
       "Tooltip": "InfoMessages",
       "ActionName": "/EmailManagerModuleInfoMessages/List",
-      "OrderNo": 121,
+      "OrderNo": 122,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -383,7 +397,7 @@
       "Text": "InfoTypes",
       "Tooltip": "InfoTypes",
       "ActionName": "/EmailManagerModuleInfoTypes/List",
-      "OrderNo": 122,
+      "OrderNo": 123,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -392,7 +406,7 @@
       "Text": "OtpMessages",
       "Tooltip": "OtpMessages",
       "ActionName": "/EmailManagerModuleOtpMessages/List",
-      "OrderNo": 123,
+      "OrderNo": 124,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -401,7 +415,7 @@
       "Text": "OtpTypes",
       "Tooltip": "OtpTypes",
       "ActionName": "/EmailManagerModuleOtpTypes/List",
-      "OrderNo": 124,
+      "OrderNo": 125,
       "ParentName": "EmailManagerModule",
       "ItemType": "G"
     },
@@ -410,7 +424,7 @@
       "Text": "SmsManagerModule",
       "Tooltip": "SmsManagerModule",
       "ActionName": "",
-      "OrderNo": 125,
+      "OrderNo": 126,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     },
@@ -419,7 +433,7 @@
       "Text": "CampaignMessages",
       "Tooltip": "CampaignMessages",
       "ActionName": "/SmsManagerModuleCampaignMessages/List",
-      "OrderNo": 125,
+      "OrderNo": 126,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     },
@@ -428,7 +442,7 @@
       "Text": "CampaignTypes",
       "Tooltip": "CampaignTypes",
       "ActionName": "/SmsManagerModuleCampaignTypes/List",
-      "OrderNo": 126,
+      "OrderNo": 127,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     },
@@ -437,7 +451,7 @@
       "Text": "InfoMessages",
       "Tooltip": "InfoMessages",
       "ActionName": "/SmsManagerModuleInfoMessages/List",
-      "OrderNo": 127,
+      "OrderNo": 128,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     },
@@ -446,7 +460,7 @@
       "Text": "InfoTypes",
       "Tooltip": "InfoTypes",
       "ActionName": "/SmsManagerModuleInfoTypes/List",
-      "OrderNo": 128,
+      "OrderNo": 129,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     },
@@ -455,7 +469,7 @@
       "Text": "OtpMessages",
       "Tooltip": "OtpMessages",
       "ActionName": "/SmsManagerModuleOtpMessages/List",
-      "OrderNo": 129,
+      "OrderNo": 130,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     },
@@ -464,7 +478,7 @@
       "Text": "OtpTypes",
       "Tooltip": "OtpTypes",
       "ActionName": "/SmsManagerModuleOtpTypes/List",
-      "OrderNo": 130,
+      "OrderNo": 131,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     },
@@ -473,7 +487,7 @@
       "Text": "SmsSenders",
       "Tooltip": "SmsSenders",
       "ActionName": "/SmsManagerModuleSmsSenders/List",
-      "OrderNo": 131,
+      "OrderNo": 132,
       "ParentName": "SmsManagerModule",
       "ItemType": "G"
     }
@@ -502,6 +516,12 @@
       "IdColumn": "Id",
       "TextColumns": "Id|FirstName|LastName",
       "StringFormat": "{0} - {1} {2}"
+    },
+    {
+      "TableName": "KafkaEvents",
+      "IdColumn": "Id",
+      "TextColumns": "Id|TopicName",
+      "StringFormat": "{0} - {1}"
     },
     {
       "TableName": "PortalPermissionTypes",
@@ -1664,6 +1684,41 @@
     },
     {
       "PortalPermissionId": 32,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 4
+    },
+    {
+      "PortalPermissionId": 33,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 33,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 0
+    },
+    {
+      "PortalPermissionId": 33,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 33,
+      "PermissionGroupId": 2,
+      "PortalPermissionTypeId": 1
+    },
+    {
+      "PortalPermissionId": 33,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 2
+    },
+    {
+      "PortalPermissionId": 33,
+      "PermissionGroupId": 1,
+      "PortalPermissionTypeId": 3
+    },
+    {
+      "PortalPermissionId": 33,
       "PermissionGroupId": 1,
       "PortalPermissionTypeId": 4
     }

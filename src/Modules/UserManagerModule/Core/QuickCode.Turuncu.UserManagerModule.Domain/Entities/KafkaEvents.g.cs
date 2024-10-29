@@ -19,18 +19,14 @@ public partial class KafkaEvents  : BaseSoftDeletable
 	public int ApiMethodDefinitionId { get; set; }
 	
 	[Column("TopicName")]
-	[StringLength(250)]
+	[StringLength(1000)]
 	public string TopicName { get; set; }
 	
-	[Column("OnComplete")]
-	public bool OnComplete { get; set; }
+	[Column("IsActive")]
+	public bool IsActive { get; set; }
 	
-	[Column("OnError")]
-	public bool OnError { get; set; }
-	
-	[Column("OnTimeout")]
-	public bool OnTimeout { get; set; }
-	
+	[InverseProperty("KafkaEvent")]
+	public virtual ICollection<TopicWorkflows> TopicWorkflows { get; } = new List<TopicWorkflows>();
 	[ForeignKey("ApiMethodDefinitionId")]
 	[InverseProperty("KafkaEvents")]
 	public virtual ApiMethodDefinitions ApiMethodDefinition { get; set; } = null!;

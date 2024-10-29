@@ -26,68 +26,22 @@
 </form-group>
 
 <div class="form-group row">
-    <label class="col-md-4 control-label">On Complete</label>
+    <label class="col-md-4 control-label">Is Active</label>
     <div class="col-md-8">
         <div class="input-group">
-        @Html.HiddenFor(m => m.@SelectedItem.OnComplete)
+        @Html.HiddenFor(m => m.@SelectedItem.IsActive)
         <div style="margin-left:-20px;">
-            @if (Model.@SelectedItem.OnComplete == true)                                                                                                            
+            @if (Model.@SelectedItem.IsActive == true)                                                                                                            
             {                                                                                                                                      
-            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.OnComplete") checked disabled       
+            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.IsActive") checked disabled       
             	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.OnComplete />                                        
+            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.IsActive />                                        
             }                                                                                                                                      
             else                                                                                                                                   
             {                                                                                                                                      
-            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.OnComplete") disabled               
+            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.IsActive") disabled               
             	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.OnComplete />                                        
-            }
-        </div>
-        </div>
-    </div>
-</div>
-
-<div class="form-group row">
-    <label class="col-md-4 control-label">On Error</label>
-    <div class="col-md-8">
-        <div class="input-group">
-        @Html.HiddenFor(m => m.@SelectedItem.OnError)
-        <div style="margin-left:-20px;">
-            @if (Model.@SelectedItem.OnError == true)                                                                                                            
-            {                                                                                                                                      
-            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.OnError") checked disabled       
-            	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.OnError />                                        
-            }                                                                                                                                      
-            else                                                                                                                                   
-            {                                                                                                                                      
-            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.OnError") disabled               
-            	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.OnError />                                        
-            }
-        </div>
-        </div>
-    </div>
-</div>
-
-<div class="form-group row">
-    <label class="col-md-4 control-label">On Timeout</label>
-    <div class="col-md-8">
-        <div class="input-group">
-        @Html.HiddenFor(m => m.@SelectedItem.OnTimeout)
-        <div style="margin-left:-20px;">
-            @if (Model.@SelectedItem.OnTimeout == true)                                                                                                            
-            {                                                                                                                                      
-            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.OnTimeout") checked disabled       
-            	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.OnTimeout />                                        
-            }                                                                                                                                      
-            else                                                                                                                                   
-            {                                                                                                                                      
-            	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_SelectedItem.OnTimeout") disabled               
-            	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.OnTimeout />                                        
+            	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@Model.SelectedItem.IsActive />                                        
             }
         </div>
         </div>
@@ -232,9 +186,14 @@
                 Object.keys(fileData).forEach(function(fileKey) {
                     formData.set(fileKey, fileData[fileKey]);
                 });
+                
+                addYamlEditorsToFormData(formData);
     
+                let button = document.querySelector('button[type="submit"]');
+                let formActionUrl = button.getAttribute('formaction');   
+                
                 $.ajax({
-                    url: "Detail",
+                    url: formActionUrl,
                     type: "POST",
                     dataType: "JSON",
                     data: formData,

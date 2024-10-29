@@ -100,8 +100,6 @@ var config = new AutoMapper.MapperConfiguration(cfg => { cfg.AddProfile(new Mapp
 builder.Services.AddSingleton<ApiKeyAuthorizationFilter>();
 builder.Services.AddQuickCodeDbContext<ReadDbContext, WriteDbContext>(builder.Configuration);
 
-builder.Services.AddSingleton<ApiKeyAuthorizationFilter>();
-
 //services.AddRouting(options => options.LowercaseUrls = true);
 
 builder.Services.AddQuickCodeRepositories();

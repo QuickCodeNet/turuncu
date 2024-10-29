@@ -107,34 +107,48 @@
 	},
 	{
 		"Id" : 16,
-		"TypeName" : "HTML",
+		"TypeName" : "YAML",
 		"IosComponentName" : "TableViewRowRichTextFieldItem",
 		"IosType" : "TextField",
 		"IconCode" : "fa-user"
 	},
 	{
 		"Id" : 17,
-		"TypeName" : "BLOB_IMAGE",
-		"IosComponentName" : "TableViewRowImageItem",
-		"IosType" : "https:\/\/www.quickcode.net\/img\/skins\/logo_s1.png",
+		"TypeName" : "YML",
+		"IosComponentName" : "TableViewRowRichTextFieldItem",
+		"IosType" : "TextField",
 		"IconCode" : "fa-user"
 	},
 	{
 		"Id" : 18,
-		"TypeName" : "BIG_STRING",
+		"TypeName" : "HTML",
 		"IosComponentName" : "TableViewRowRichTextFieldItem",
 		"IosType" : "TextField",
 		"IconCode" : "fa-user"
 	},
 	{
 		"Id" : 19,
+		"TypeName" : "BLOB_IMAGE",
+		"IosComponentName" : "TableViewRowImageItem",
+		"IosType" : "https:\/\/www.quickcode.net\/img\/skins\/logo_s1.png",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 20,
+		"TypeName" : "BIG_STRING",
+		"IosComponentName" : "TableViewRowRichTextFieldItem",
+		"IosType" : "TextField",
+		"IconCode" : "fa-user"
+	},
+	{
+		"Id" : 21,
 		"TypeName" : "DECIMAL_DEGREE",
 		"IosComponentName" : "TableViewRowTextFieldItem",
 		"IosType" : "TextFieldAmount",
 		"IconCode" : "fa-money-bill-alt"
 	},
 	{
-		"Id" : 20,
+		"Id" : 22,
 		"TypeName" : "DECIMAL_18_8",
 		"IosComponentName" : "TableViewRowTextFieldItem",
 		"IosType" : "TextFieldAmount",

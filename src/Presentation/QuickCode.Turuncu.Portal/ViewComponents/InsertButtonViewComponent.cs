@@ -29,11 +29,14 @@ namespace QuickCode.Turuncu.Portal.ViewComponents
             }
 
             var result = await portalPermissionManager.GetPagePermission($"{areaName}{controllerName}", actionName);
-            ViewPermissionItemData model = new ViewPermissionItemData();
-            model.Item = result;
-
-            model.ControllerName = controllerName.Replace("Controller", string.Empty);
-            model.ActionName = actionName;
+            var model = new ViewPermissionItemData
+            {
+                Item = result,
+                AreaName = areaName,
+                ControllerName = controllerName!.Replace("Controller", string.Empty),
+                ActionName = actionName
+            };
+            
             return View(model);
         }
 

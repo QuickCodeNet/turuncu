@@ -22,5 +22,8 @@ namespace QuickCode.Turuncu.UserManagerModule.Application.Interfaces.Repositorie
     {
         Task<DLResponse<KafkaEvents>> GetByPkAsync(int id);
         Task<DLResponse<List<KafkaEventsGetKafkaEventsResponseDto>>> KafkaEventsGetKafkaEventsAsync();
+        Task<DLResponse<List<KafkaEventsGetActiveKafkaEventsResponseDto>>> KafkaEventsGetActiveKafkaEventsAsync();
+        Task<DLResponse<List<KafkaEventsTopicWorkflows_RESTResponseDto>>> KafkaEventsTopicWorkflows_RESTAsync(int kafkaEventsId);
+        Task<DLResponse<KafkaEventsTopicWorkflows_KEY_RESTResponseDto>> KafkaEventsTopicWorkflows_KEY_RESTAsync(int kafkaEventsId, int topicWorkflowsId);
     }
 }

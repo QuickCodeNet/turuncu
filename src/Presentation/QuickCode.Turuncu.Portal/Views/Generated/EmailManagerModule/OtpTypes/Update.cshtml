@@ -35,7 +35,7 @@
                 </div>
                  <button type="button" data-dismiss="modal" class="btn float-left" bc-color="Secondary">Cancel</button>
 <button type="reset" bc-outline="true" bc-color="Info" style="margin-left:8px; ">Clear</button>
-<button type="submit" formmethod="post" formaction="Update" class="btn float-right" bc-color="Primary">Update</button>
+<button type="submit" formmethod="post" formaction="/EmailManagerModuleOtpTypes/Update" class="btn float-right" bc-color="Primary">Update</button>
  
             </form>
         </div>
@@ -165,9 +165,14 @@
                 Object.keys(fileData).forEach(function(fileKey) {
                     formData.set(fileKey, fileData[fileKey]);
                 });
+                
+                addYamlEditorsToFormData(formData);
     
+                let button = document.querySelector('button[type="submit"]');
+                let formActionUrl = button.getAttribute('formaction');   
+                
                 $.ajax({
-                    url: "Update",
+                    url: formActionUrl,
                     type: "POST",
                     dataType: "JSON",
                     data: formData,

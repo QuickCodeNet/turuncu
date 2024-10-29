@@ -194,9 +194,14 @@
                 Object.keys(fileData).forEach(function(fileKey) {
                     formData.set(fileKey, fileData[fileKey]);
                 });
+                
+                addYamlEditorsToFormData(formData);
     
+                let button = document.querySelector('button[type="submit"]');
+                let formActionUrl = button.getAttribute('formaction');   
+                
                 $.ajax({
-                    url: "Detail",
+                    url: formActionUrl,
                     type: "POST",
                     dataType: "JSON",
                     data: formData,

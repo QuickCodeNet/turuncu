@@ -3,758 +3,557 @@
   {
     "ApiMethodDefinitionId": 3,
     "TopicName": "turuncu.user_manager_module.portal_menus",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 5,
     "TopicName": "turuncu.user_manager_module.portal_menus",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 6,
     "TopicName": "turuncu.user_manager_module.portal_menus",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 9,
     "TopicName": "turuncu.user_manager_module.column_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 11,
     "TopicName": "turuncu.user_manager_module.column_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 12,
     "TopicName": "turuncu.user_manager_module.column_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 17,
     "TopicName": "turuncu.user_manager_module.portal_permission_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 19,
     "TopicName": "turuncu.user_manager_module.portal_permission_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 20,
     "TopicName": "turuncu.user_manager_module.portal_permission_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 25,
     "TopicName": "turuncu.user_manager_module.portal_permissions",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 27,
     "TopicName": "turuncu.user_manager_module.portal_permissions",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 28,
     "TopicName": "turuncu.user_manager_module.portal_permissions",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 35,
     "TopicName": "turuncu.user_manager_module.api_method_definitions",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 37,
     "TopicName": "turuncu.user_manager_module.api_method_definitions",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 38,
     "TopicName": "turuncu.user_manager_module.api_method_definitions",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 42,
-    "TopicName": "turuncu.user_manager_module.kafka_events",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.topic_workflows",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 44,
-    "TopicName": "turuncu.user_manager_module.kafka_events",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.topic_workflows",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 45,
-    "TopicName": "turuncu.user_manager_module.kafka_events",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 50,
-    "TopicName": "turuncu.user_manager_module.api_permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.topic_workflows",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 52,
-    "TopicName": "turuncu.user_manager_module.api_permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.kafka_events",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 53,
-    "TopicName": "turuncu.user_manager_module.api_permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 54,
+    "TopicName": "turuncu.user_manager_module.kafka_events",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 58,
-    "TopicName": "turuncu.user_manager_module.portal_permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 55,
+    "TopicName": "turuncu.user_manager_module.kafka_events",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 60,
-    "TopicName": "turuncu.user_manager_module.portal_permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.api_permission_groups",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 61,
+    "ApiMethodDefinitionId": 62,
+    "TopicName": "turuncu.user_manager_module.api_permission_groups",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 63,
+    "TopicName": "turuncu.user_manager_module.api_permission_groups",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 68,
     "TopicName": "turuncu.user_manager_module.portal_permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 70,
+    "TopicName": "turuncu.user_manager_module.portal_permission_groups",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 71,
+    "TopicName": "turuncu.user_manager_module.portal_permission_groups",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 80,
     "TopicName": "turuncu.user_manager_module.permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 72,
+    "ApiMethodDefinitionId": 82,
     "TopicName": "turuncu.user_manager_module.permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 73,
+    "ApiMethodDefinitionId": 83,
     "TopicName": "turuncu.user_manager_module.permission_groups",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 76,
-    "TopicName": "turuncu.user_manager_module.table_combobox_settings",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 78,
-    "TopicName": "turuncu.user_manager_module.table_combobox_settings",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 79,
-    "TopicName": "turuncu.user_manager_module.table_combobox_settings",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 86,
-    "TopicName": "turuncu.user_manager_module.asp_net_roles",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.table_combobox_settings",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 88,
-    "TopicName": "turuncu.user_manager_module.asp_net_roles",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.table_combobox_settings",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 89,
+    "TopicName": "turuncu.user_manager_module.table_combobox_settings",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 96,
     "TopicName": "turuncu.user_manager_module.asp_net_roles",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 103,
-    "TopicName": "turuncu.user_manager_module.asp_net_users",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 98,
+    "TopicName": "turuncu.user_manager_module.asp_net_roles",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 105,
-    "TopicName": "turuncu.user_manager_module.asp_net_users",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 106,
-    "TopicName": "turuncu.user_manager_module.asp_net_users",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 108,
-    "TopicName": "turuncu.user_manager_module.refresh_tokens.update_refresh_token",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 111,
-    "TopicName": "turuncu.user_manager_module.refresh_tokens",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 99,
+    "TopicName": "turuncu.user_manager_module.asp_net_roles",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 113,
+    "TopicName": "turuncu.user_manager_module.asp_net_users",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 115,
+    "TopicName": "turuncu.user_manager_module.asp_net_users",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 116,
+    "TopicName": "turuncu.user_manager_module.asp_net_users",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 118,
+    "TopicName": "turuncu.user_manager_module.refresh_tokens.update_refresh_token",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 121,
     "TopicName": "turuncu.user_manager_module.refresh_tokens",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 114,
-    "TopicName": "turuncu.user_manager_module.refresh_tokens",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 117,
-    "TopicName": "turuncu.user_manager_module.asp_net_role_claims",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 119,
-    "TopicName": "turuncu.user_manager_module.asp_net_role_claims",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 120,
-    "TopicName": "turuncu.user_manager_module.asp_net_role_claims",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 123,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_claims",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.refresh_tokens",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 125,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_claims",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 124,
+    "TopicName": "turuncu.user_manager_module.refresh_tokens",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 126,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_claims",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 127,
+    "TopicName": "turuncu.user_manager_module.asp_net_role_claims",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 129,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_logins",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.asp_net_role_claims",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 131,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_logins",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 130,
+    "TopicName": "turuncu.user_manager_module.asp_net_role_claims",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 132,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_logins",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 133,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_claims",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 135,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_roles",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.asp_net_user_claims",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 137,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_roles",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 136,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_claims",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 138,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_roles",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 139,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_logins",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 141,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_tokens",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.asp_net_user_logins",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 143,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_tokens",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 142,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_logins",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 144,
-    "TopicName": "turuncu.user_manager_module.asp_net_user_tokens",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 145,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_roles",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 147,
-    "TopicName": "turuncu.email_manager_module.info_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.asp_net_user_roles",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 149,
-    "TopicName": "turuncu.email_manager_module.info_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 148,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_roles",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 150,
-    "TopicName": "turuncu.email_manager_module.info_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 151,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_tokens",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 153,
-    "TopicName": "turuncu.email_manager_module.campaign_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.asp_net_user_tokens",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 155,
-    "TopicName": "turuncu.email_manager_module.campaign_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 154,
+    "TopicName": "turuncu.user_manager_module.asp_net_user_tokens",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 156,
-    "TopicName": "turuncu.email_manager_module.campaign_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 157,
+    "TopicName": "turuncu.email_manager_module.info_messages",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 159,
-    "TopicName": "turuncu.email_manager_module.otp_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.email_manager_module.info_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 161,
-    "TopicName": "turuncu.email_manager_module.otp_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 160,
+    "TopicName": "turuncu.email_manager_module.info_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 162,
-    "TopicName": "turuncu.email_manager_module.otp_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 163,
+    "TopicName": "turuncu.email_manager_module.campaign_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 167,
-    "TopicName": "turuncu.email_manager_module.otp_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 165,
+    "TopicName": "turuncu.email_manager_module.campaign_messages",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 166,
+    "TopicName": "turuncu.email_manager_module.campaign_messages",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 169,
-    "TopicName": "turuncu.email_manager_module.otp_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.email_manager_module.otp_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 170,
-    "TopicName": "turuncu.email_manager_module.otp_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 171,
+    "TopicName": "turuncu.email_manager_module.otp_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 175,
-    "TopicName": "turuncu.email_manager_module.info_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 172,
+    "TopicName": "turuncu.email_manager_module.otp_messages",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 177,
-    "TopicName": "turuncu.email_manager_module.info_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.email_manager_module.otp_types",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 178,
-    "TopicName": "turuncu.email_manager_module.info_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 179,
+    "TopicName": "turuncu.email_manager_module.otp_types",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 183,
-    "TopicName": "turuncu.email_manager_module.campaign_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 180,
+    "TopicName": "turuncu.email_manager_module.otp_types",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 185,
-    "TopicName": "turuncu.email_manager_module.campaign_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.email_manager_module.info_types",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 186,
+    "ApiMethodDefinitionId": 187,
+    "TopicName": "turuncu.email_manager_module.info_types",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 188,
+    "TopicName": "turuncu.email_manager_module.info_types",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 193,
     "TopicName": "turuncu.email_manager_module.campaign_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 195,
+    "TopicName": "turuncu.email_manager_module.campaign_types",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 196,
+    "TopicName": "turuncu.email_manager_module.campaign_types",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 205,
     "TopicName": "turuncu.email_manager_module.email_senders",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 197,
-    "TopicName": "turuncu.email_manager_module.email_senders",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 198,
-    "TopicName": "turuncu.email_manager_module.email_senders",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 201,
-    "TopicName": "turuncu.sms_manager_module.info_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 203,
-    "TopicName": "turuncu.sms_manager_module.info_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 204,
-    "TopicName": "turuncu.sms_manager_module.info_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 207,
-    "TopicName": "turuncu.sms_manager_module.campaign_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.email_manager_module.email_senders",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 209,
-    "TopicName": "turuncu.sms_manager_module.campaign_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 208,
+    "TopicName": "turuncu.email_manager_module.email_senders",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 210,
-    "TopicName": "turuncu.sms_manager_module.campaign_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 211,
+    "TopicName": "turuncu.sms_manager_module.info_messages",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 213,
-    "TopicName": "turuncu.sms_manager_module.otp_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.sms_manager_module.info_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 215,
-    "TopicName": "turuncu.sms_manager_module.otp_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 214,
+    "TopicName": "turuncu.sms_manager_module.info_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 216,
-    "TopicName": "turuncu.sms_manager_module.otp_messages",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 217,
+    "TopicName": "turuncu.sms_manager_module.campaign_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 221,
-    "TopicName": "turuncu.sms_manager_module.otp_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 219,
+    "TopicName": "turuncu.sms_manager_module.campaign_messages",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 220,
+    "TopicName": "turuncu.sms_manager_module.campaign_messages",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 223,
-    "TopicName": "turuncu.sms_manager_module.otp_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.sms_manager_module.otp_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 224,
-    "TopicName": "turuncu.sms_manager_module.otp_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 225,
+    "TopicName": "turuncu.sms_manager_module.otp_messages",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 229,
-    "TopicName": "turuncu.sms_manager_module.info_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 226,
+    "TopicName": "turuncu.sms_manager_module.otp_messages",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 231,
-    "TopicName": "turuncu.sms_manager_module.info_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.sms_manager_module.otp_types",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 232,
-    "TopicName": "turuncu.sms_manager_module.info_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 233,
+    "TopicName": "turuncu.sms_manager_module.otp_types",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 237,
-    "TopicName": "turuncu.sms_manager_module.campaign_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 234,
+    "TopicName": "turuncu.sms_manager_module.otp_types",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 239,
-    "TopicName": "turuncu.sms_manager_module.campaign_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.sms_manager_module.info_types",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 240,
+    "ApiMethodDefinitionId": 241,
+    "TopicName": "turuncu.sms_manager_module.info_types",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 242,
+    "TopicName": "turuncu.sms_manager_module.info_types",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 247,
     "TopicName": "turuncu.sms_manager_module.campaign_types",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 249,
-    "TopicName": "turuncu.sms_manager_module.sms_senders",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.sms_manager_module.campaign_types",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 251,
-    "TopicName": "turuncu.sms_manager_module.sms_senders",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 252,
-    "TopicName": "turuncu.sms_manager_module.sms_senders",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 254,
-    "TopicName": "turuncu.user_manager_module.portal_permissions.update_portal_permission",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 256,
-    "TopicName": "turuncu.user_manager_module.api_method_definitions.update_api_permission",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 257,
-    "TopicName": "turuncu.auth.register",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 258,
-    "TopicName": "turuncu.auth.login",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 250,
+    "TopicName": "turuncu.sms_manager_module.campaign_types",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 259,
-    "TopicName": "turuncu.auth.validate",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.sms_manager_module.sms_senders",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 260,
-    "TopicName": "turuncu.auth.refresh",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 261,
+    "TopicName": "turuncu.sms_manager_module.sms_senders",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 262,
-    "TopicName": "turuncu.auth.resendconfirmationemail",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
-  },
-  {
-    "ApiMethodDefinitionId": 263,
-    "TopicName": "turuncu.auth.forgotpassword",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.sms_manager_module.sms_senders",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 264,
-    "TopicName": "turuncu.auth.resetpassword",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "TopicName": "turuncu.user_manager_module.portal_permissions.update_portal_permission",
+    "IsActive": false
   },
   {
-    "ApiMethodDefinitionId": 265,
-    "TopicName": "turuncu.auth.manage.user2fa",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "ApiMethodDefinitionId": 266,
+    "TopicName": "turuncu.user_manager_module.api_method_definitions.update_api_permission",
+    "IsActive": false
   },
   {
     "ApiMethodDefinitionId": 267,
+    "TopicName": "turuncu.auth.register",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 268,
+    "TopicName": "turuncu.auth.login",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 269,
+    "TopicName": "turuncu.auth.validate",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 270,
+    "TopicName": "turuncu.auth.refresh",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 272,
+    "TopicName": "turuncu.auth.resendconfirmationemail",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 273,
+    "TopicName": "turuncu.auth.forgotpassword",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 274,
+    "TopicName": "turuncu.auth.resetpassword",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 275,
+    "TopicName": "turuncu.auth.manage.user2fa",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionId": 277,
     "TopicName": "turuncu.auth.manage.info",
-    "OnComplete": false,
-    "OnError": false,
-    "OnTimeout": false
+    "IsActive": false
   }
 ]
 }

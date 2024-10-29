@@ -176,5 +176,74 @@ namespace QuickCode.Turuncu.UserManagerModule.Api.Controllers
 
             return Ok(response.Value);
         }
+
+        [HttpGet("get-active-kafka-events")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<KafkaEventsGetActiveKafkaEventsResponseDto>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public async Task<IActionResult> KafkaEventsGetActiveKafkaEventsAsync()
+        {
+            var response = await mediator.Send(new KafkaEventsKafkaEventsGetActiveKafkaEventsQuery());
+            if (response.Code == 404)
+            {
+                var notFoundMessage = $" not found in KafkaEvents Table";
+                logger.LogWarning($"List Error: '{notFoundMessage}''");
+                return NotFound(notFoundMessage);
+            }
+            else if (response.Code != 0)
+            {
+                var errorMessage = $"Response Code: {response.Code}, Message: {response.Message}";
+                logger.LogError($"List Error: '{errorMessage}''");
+                return BadRequest(errorMessage);
+            }
+
+            return Ok(response.Value);
+        }
+
+        [HttpGet("{kafkaEventsId}/topic-workflows")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<KafkaEventsTopicWorkflows_RESTResponseDto>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public async Task<IActionResult> KafkaEventsTopicWorkflows_RESTAsync(int kafkaEventsId)
+        {
+            var response = await mediator.Send(new KafkaEventsKafkaEventsTopicWorkflows_RESTQuery(kafkaEventsId));
+            if (response.Code == 404)
+            {
+                var notFoundMessage = $"KafkaEventsId: '{kafkaEventsId}' not found in KafkaEvents Table";
+                logger.LogWarning($"List Error: '{notFoundMessage}''");
+                return NotFound(notFoundMessage);
+            }
+            else if (response.Code != 0)
+            {
+                var errorMessage = $"Response Code: {response.Code}, Message: {response.Message}";
+                logger.LogError($"List Error: '{errorMessage}''");
+                return BadRequest(errorMessage);
+            }
+
+            return Ok(response.Value);
+        }
+
+        [HttpGet("{kafkaEventsId}/topic-workflows/{topicWorkflowsId}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(KafkaEventsTopicWorkflows_KEY_RESTResponseDto))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+        public async Task<IActionResult> KafkaEventsTopicWorkflows_KEY_RESTAsync(int kafkaEventsId, int topicWorkflowsId)
+        {
+            var response = await mediator.Send(new KafkaEventsKafkaEventsTopicWorkflows_KEY_RESTQuery(kafkaEventsId, topicWorkflowsId));
+            if (response.Code == 404)
+            {
+                var notFoundMessage = $"KafkaEventsId: '{kafkaEventsId}', TopicWorkflowsId: '{topicWorkflowsId}' not found in KafkaEvents Table";
+                logger.LogWarning($"List Error: '{notFoundMessage}''");
+                return NotFound(notFoundMessage);
+            }
+            else if (response.Code != 0)
+            {
+                var errorMessage = $"Response Code: {response.Code}, Message: {response.Message}";
+                logger.LogError($"List Error: '{errorMessage}''");
+                return BadRequest(errorMessage);
+            }
+
+            return Ok(response.Value);
+        }
     }
 }

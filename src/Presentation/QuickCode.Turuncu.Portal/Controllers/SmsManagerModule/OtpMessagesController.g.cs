@@ -126,7 +126,7 @@ namespace QuickCode.Turuncu.Portal.Controllers.SmsManagerModule
             ModelBinder(ref model);
             SetModelBinder(ref model);
             model.SelectedItem = new OtpMessagesObj();
-            return await Task.FromResult(PartialView("Insert", model));
+            return PartialView("Insert", model);
         }
 
         [Route("DetailItem")]

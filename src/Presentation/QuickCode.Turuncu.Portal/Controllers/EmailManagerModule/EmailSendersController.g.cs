@@ -121,7 +121,7 @@ namespace QuickCode.Turuncu.Portal.Controllers.EmailManagerModule
             ModelBinder(ref model);
             SetModelBinder(ref model);
             model.SelectedItem = new EmailSendersObj();
-            return await Task.FromResult(PartialView("Insert", model));
+            return PartialView("Insert", model);
         }
 
         [Route("DetailItem")]

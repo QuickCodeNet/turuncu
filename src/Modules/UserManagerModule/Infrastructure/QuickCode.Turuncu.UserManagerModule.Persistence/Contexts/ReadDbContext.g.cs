@@ -24,6 +24,8 @@ public partial class ReadDbContext : DbContext
 
 	public virtual DbSet<ApiMethodDefinitions> ApiMethodDefinitions { get; set; }
 
+	public virtual DbSet<TopicWorkflows> TopicWorkflows { get; set; }
+
 	public virtual DbSet<KafkaEvents> KafkaEvents { get; set; }
 
 	public virtual DbSet<ApiPermissionGroups> ApiPermissionGroups { get; set; }
@@ -69,17 +71,7 @@ public partial class ReadDbContext : DbContext
 		.HasDefaultValueSql("'m'");
 
 		modelBuilder.Entity<KafkaEvents>()
-		.Property(b => b.OnComplete)
-		.IsRequired()
-		.HasDefaultValue(true);
-
-		modelBuilder.Entity<KafkaEvents>()
-		.Property(b => b.OnError)
-		.IsRequired()
-		.HasDefaultValue(true);
-
-		modelBuilder.Entity<KafkaEvents>()
-		.Property(b => b.OnTimeout)
+		.Property(b => b.IsActive)
 		.IsRequired()
 		.HasDefaultValue(true);
 
@@ -119,6 +111,9 @@ public partial class ReadDbContext : DbContext
 		modelBuilder.Entity<ApiMethodDefinitions>().Property(b => b.IsDeleted).IsRequired().HasDefaultValue(false);
 		modelBuilder.Entity<ApiMethodDefinitions>().HasQueryFilter(r => !r.IsDeleted);
 
+		modelBuilder.Entity<TopicWorkflows>().Property(b => b.IsDeleted).IsRequired().HasDefaultValue(false);
+		modelBuilder.Entity<TopicWorkflows>().HasQueryFilter(r => !r.IsDeleted);
+
 		modelBuilder.Entity<KafkaEvents>().Property(b => b.IsDeleted).IsRequired().HasDefaultValue(false);
 		modelBuilder.Entity<KafkaEvents>().HasQueryFilter(r => !r.IsDeleted);
 
@@ -143,6 +138,7 @@ public partial class ReadDbContext : DbContext
 		modelBuilder.Entity<PortalPermissionTypes>().HasIndex(r => r.IsDeleted).HasFilter("IsDeleted = 0");
 		modelBuilder.Entity<PortalPermissions>().HasIndex(r => r.IsDeleted).HasFilter("IsDeleted = 0");
 		modelBuilder.Entity<ApiMethodDefinitions>().HasIndex(r => r.IsDeleted).HasFilter("IsDeleted = 0");
+		modelBuilder.Entity<TopicWorkflows>().HasIndex(r => r.IsDeleted).HasFilter("IsDeleted = 0");
 		modelBuilder.Entity<KafkaEvents>().HasIndex(r => r.IsDeleted).HasFilter("IsDeleted = 0");
 		modelBuilder.Entity<ApiPermissionGroups>().HasIndex(r => r.IsDeleted).HasFilter("IsDeleted = 0");
 		modelBuilder.Entity<PortalPermissionGroups>().HasIndex(r => r.IsDeleted).HasFilter("IsDeleted = 0");

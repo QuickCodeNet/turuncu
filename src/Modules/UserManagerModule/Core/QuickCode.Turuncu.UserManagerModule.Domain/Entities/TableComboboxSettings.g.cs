@@ -21,18 +21,6 @@ public partial class TableComboboxSettings  : BaseSoftDeletable
 	[StringLength(250)]
 	public string IdColumn { get; set; }
 	
-	[Column("RefTableName")]
-	[StringLength(250)]
-	public string RefTableName { get; set; }
-	
-	[Column("RefTableColumnId")]
-	[StringLength(250)]
-	public string RefTableColumnId { get; set; }
-	
-	[Column("RefIdColumn")]
-	[StringLength(250)]
-	public string RefIdColumn { get; set; }
-	
 	[Column("TextColumns")]
 	[StringLength(int.MaxValue)]
 	public string TextColumns { get; set; }

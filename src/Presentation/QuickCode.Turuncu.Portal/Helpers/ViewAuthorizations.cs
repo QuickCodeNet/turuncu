@@ -20,6 +20,7 @@ namespace QuickCode.Turuncu.Portal.Helpers
     public class ViewPermissionItemData
     {
         public ViewPermission Item { get; set; }
+        public string AreaName { get; set; }
         public string ControllerName { get; set; }
         public string ActionName { get; set; }
         public string ItemId { get; set; }

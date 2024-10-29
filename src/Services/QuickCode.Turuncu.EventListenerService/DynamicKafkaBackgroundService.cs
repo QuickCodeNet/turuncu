@@ -85,22 +85,13 @@ public class DynamicKafkaBackgroundService : BackgroundService
         (_kafkaEventsClient as ClientBase)!.SetApiKey(configApiKey!);
         var allEvents = await _kafkaEventsClient.GetKafkaEventsAsync(stoppingToken);
         var allTopicNames = new List<string>();
-        var onCompleteEvents = allEvents.
-            Where(i => i.OnComplete).
-            Select(i => $"{i.TopicName}_{i.HttpMethod.ToLower()}__on_complete").ToList();
+ 
 
-        var onErrorEvents = allEvents.
-            Where(i => i.OnError).
-            Select(i => $"{i.TopicName}_{i.HttpMethod.ToLower()}__on_error").ToList();
+        var activeEvents = allEvents.
+            Where(i => i.IsActive).
+            Select(i => $"{i.TopicName}_{i.HttpMethod.ToLower()}").ToList();
         
-        var onTimeoutEvents = allEvents.
-            Where(i => i.OnTimeout).
-            Select(i => $"{i.TopicName}_{i.HttpMethod.ToLower()}__on_timeout").ToList();
-
-        
-        allTopicNames.AddRange(onCompleteEvents);
-        allTopicNames.AddRange(onErrorEvents);
-        allTopicNames.AddRange(onTimeoutEvents);
+        allTopicNames.AddRange(activeEvents);
         return allTopicNames;
     }
     

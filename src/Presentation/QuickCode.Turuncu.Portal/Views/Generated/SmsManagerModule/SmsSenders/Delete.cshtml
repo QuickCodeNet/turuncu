@@ -34,7 +34,7 @@
                     <hr class="col-xs-12">
                 </div>
                  <button type="button" data-dismiss="modal" class="btn float-left" bc-color="Warning">Cancel</button>
-<button type="submit" formmethod="post" formaction="Delete" class="btn float-right" bc-color="Primary">Delete</button>
+<button type="submit" formmethod="post" formaction="/SmsManagerModuleSmsSenders/Delete" class="btn float-right" bc-color="Primary">Delete</button>
  
             </form>
         </div>
@@ -164,9 +164,14 @@
                 Object.keys(fileData).forEach(function(fileKey) {
                     formData.set(fileKey, fileData[fileKey]);
                 });
+                
+                addYamlEditorsToFormData(formData);
     
+                let button = document.querySelector('button[type="submit"]');
+                let formActionUrl = button.getAttribute('formaction');   
+                
                 $.ajax({
-                    url: "Delete",
+                    url: formActionUrl,
                     type: "POST",
                     dataType: "JSON",
                     data: formData,

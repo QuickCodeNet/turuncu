@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net;
 using System.Reflection;
 using System.Text.Json.Serialization;
@@ -16,11 +17,10 @@ using QuickCode.Turuncu.Common.Nswag;
 using QuickCode.Turuncu.Common.Nswag.Extensions;
 using QuickCode.Turuncu.Gateway.Models;
 using QuickCode.Turuncu.Gateway.Extensions;
-using QuickCode.Turuncu.Gateway.HTTP;
 using QuickCode.Turuncu.Gateway.KafkaProducer;
 using Serilog;
 using InMemoryConfigProvider = QuickCode.Turuncu.Gateway.Extensions.InMemoryConfigProvider;
-using JsonSerializer = System.Text.Json.JsonSerializer;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -182,12 +182,6 @@ void ConfigureEnvironmentVariables(IConfiguration configuration)
     Console.WriteLine($"environmentName : {environmentName}");
 }
 
-async Task<bool> GetTokenIsValid(IServiceProvider services, string token)
-{
-    var authenticationsClient = services.GetRequiredService<IAuthenticationsClient>();
-    var isValidToken = !token.IsTokenExpired() && await authenticationsClient.ValidateAsync(token);
-    return isValidToken;
-}
 
 Func<HttpContext, Func<Task>, Task> YarpMiddlewareKafkaManager(IServiceProvider services)
 {
@@ -197,43 +191,31 @@ Func<HttpContext, Func<Task>, Task> YarpMiddlewareKafkaManager(IServiceProvider 
         var kafkaProducer = services.GetRequiredService<IKafkaProducerWrapper>();
         var originalBodyStream = context.Response.Body;
         context.Request.EnableBuffering();
+
         using var responseBody = new MemoryStream();
         context.Response.Body = responseBody;
 
-        await next();
-        
-        var kafkaEvent = await CheckKafkaEventExists(services, memoryCache, context);
-        if (kafkaEvent is not null)
+        var stopwatch = Stopwatch.StartNew();
+        try
         {
-            var requestBodyText = await context.TryGetRequestBodyAsync();
-            responseBody.Seek(0, SeekOrigin.Begin);
-            var responseBodyText = await new StreamReader(responseBody).ReadToEndAsync();
-            
-            var kafkaMessage = new KafkaMessage
-            {
-                RequestInfo = new RequestInfo
-                {
-                    Path = context.Request.Path,
-                    Method = context.Request.Method,
-                    Headers = context.Request.Headers.ToDictionary(h => h.Key, h => h.Value.ToString()),
-                    Body = requestBodyText
-                },
-                ResponseInfo = new ResponseInfo
-                {
-                    StatusCode = context.Response.StatusCode,
-                    Headers = context.Response.Headers.ToDictionary(h => h.Key, h => h.Value.ToString()),
-                    Body = responseBodyText
-                },
-                Timestamp = DateTime.UtcNow
-            };
-
-            var topic = kafkaEvent.TopicName;
-            var key = GenerateKey(context);
-            SendKafkaMessage(kafkaProducer, topic, key, kafkaMessage);
+            await next(); // Middleware zincirinde sonraki işlemi çağırır.
+            await KafkaHelper.SendKafkaMessageIfEventExists(services, memoryCache, kafkaProducer, context, stopwatch);
         }
-
-        responseBody.Seek(0, SeekOrigin.Begin);
-        await responseBody.CopyToAsync(originalBodyStream);
+        catch (Exception ex)
+        {
+            var kafkaEvent = await KafkaHelper.CheckKafkaEventExists(services, memoryCache, context);
+            if (kafkaEvent is not null)
+            {
+                await KafkaHelper.SendErrorKafkaMessage(kafkaProducer, kafkaEvent.TopicName, context, stopwatch, ex);
+            }
+            throw;
+        }
+        finally
+        {
+            responseBody.Seek(0, SeekOrigin.Begin);
+            await responseBody.CopyToAsync(originalBodyStream);
+            stopwatch.Stop();
+        }
     };
 }
 
@@ -268,90 +250,6 @@ Func<HttpContext, Func<Task>, Task> YarpMiddlewareApiAuthorization(IServiceProvi
 }
 
 
-async Task<KafkaEventsGetKafkaEventsResponseDto?> CheckKafkaEventExists(IServiceProvider services,
-    IMemoryCache memoryCache, HttpContext context)
-{
-    var allKafkaEvents = await GetKafkaEvents(services, memoryCache);
-
-    var kafkaEvent = allKafkaEvents.Find(endpoint =>
-        endpoint.Path.IsRouteMatch(context.Request.Path) &&
-        endpoint.HttpMethod.Equals(context.Request.Method, StringComparison.OrdinalIgnoreCase));
-
-    if (kafkaEvent == null)
-    {
-        return null;
-    }
-
-    var eventName = GetEventName(kafkaEvent, context);
-    if (string.IsNullOrEmpty(eventName))
-    {
-        return null;
-    }
-
-    kafkaEvent = KafkaEventsGetKafkaEventsResponseDto.FromJson(kafkaEvent.ToJson());
-    var eventKey = $"_{kafkaEvent.HttpMethod}__{eventName}".ToLowerInvariant();
-    kafkaEvent!.TopicName = $"{kafkaEvent!.TopicName}{eventKey}".ToLowerInvariant();
-    return kafkaEvent;
-}
-
-string GetEventName(KafkaEventsGetKafkaEventsResponseDto? kafkaEvent, HttpContext context)
-{
-    var completeHttpStatusCodes = new List<HttpStatusCode>()
-        { HttpStatusCode.OK, HttpStatusCode.NoContent, HttpStatusCode.Accepted, HttpStatusCode.Created };
-    var errorHttpStatusCodes = new List<HttpStatusCode>()
-    {
-        HttpStatusCode.NotFound, HttpStatusCode.BadRequest, HttpStatusCode.Forbidden, HttpStatusCode.Unauthorized,
-        HttpStatusCode.InternalServerError, HttpStatusCode.ServiceUnavailable
-    };
-    var timeoutHttpStatusCodes = new List<HttpStatusCode>()
-        { HttpStatusCode.GatewayTimeout, HttpStatusCode.RequestTimeout };
-
-    var eventName =
-        kafkaEvent!.OnComplete &&
-        completeHttpStatusCodes.Contains((HttpStatusCode)context.Response.StatusCode)
-            ? "on_complete"
-            : string.Empty;
-    
-    if (string.IsNullOrEmpty(eventName))
-    {
-        eventName = kafkaEvent!.OnError &&
-                    errorHttpStatusCodes.Contains((HttpStatusCode)context.Response.StatusCode)
-            ? "on_error"
-            : string.Empty;
-    }
-
-    if (string.IsNullOrEmpty(eventName))
-    {
-        eventName = kafkaEvent!.OnTimeout &&
-                    timeoutHttpStatusCodes.Contains((HttpStatusCode)context.Response.StatusCode)
-            ? "on_timeout"
-            : string.Empty;
-    }
-
-    return eventName;
-}
-
-string GenerateKey(HttpContext context)
-{
-    var timestamp = DateTime.UtcNow.Ticks;
-    return $"{context.Request.Method}|{context.Request.Path}|{timestamp}";
-}
-
-void SendKafkaMessage(IKafkaProducerWrapper kafkaProducer, string topic, string key, KafkaMessage message)
-{
-    Task.Run(async () =>
-    {
-        try
-        {
-            await kafkaProducer.ProduceAsync(topic, key, JsonSerializer.Serialize(message));
-            Console.WriteLine($"Message sent to Kafka topic: {topic}, Key: {key}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Failed to send message to Kafka. Topic: {topic}, Key: {key}, Error: {ex.Message}");
-        }
-    });
-}
 
 string ExtractToken(HttpContext context)
 {
@@ -410,7 +308,7 @@ async Task<bool> ValidateAndProcessToken(HttpContext context, IServiceProvider s
 async Task<bool> ValidateToken(IServiceProvider services, string token, string cacheKey, IMemoryCache memoryCache)
 {
     return !token.IsTokenExpired() && await memoryCache.GetOrAddAsync<bool>(cacheKey,
-        async parameters => await GetTokenIsValid(services, token),
+        async parameters => await KafkaHelper.GetTokenIsValid(services, token),
         TimeSpan.FromSeconds(token.GetTokenExpirationTime()));
 }
 
@@ -432,16 +330,6 @@ async Task<bool> IsMethodValid(HttpContext context, IServiceProvider services, i
     return path.IsRouteMatch(validPaths);
 }
 
-async Task<List<KafkaEventsGetKafkaEventsResponseDto>> GetKafkaEvents(IServiceProvider services,
-    IMemoryCache memoryCache)
-{
-    var configuration = services.GetRequiredService<IConfiguration>();
-    var kafkaEventsClient = services.GetRequiredService<IKafkaEventsClient>();
-
-    return await memoryCache.GetOrAddAsync<List<KafkaEventsGetKafkaEventsResponseDto>>("KafkaEvents",
-        async parameters => await GetAllKafkaEvents(configuration, kafkaEventsClient),
-        TimeSpan.FromMinutes(1));
-}
 
 async Task<List<GroupHttpMethodPath>> GetGroupMethods(IServiceProvider services, IMemoryCache memoryCache)
 {
@@ -533,14 +421,7 @@ IResult GetServicesHtml()
     return Results.Extensions.Html(@$"{fileContent}");
 }
 
-async Task<List<KafkaEventsGetKafkaEventsResponseDto>> GetAllKafkaEvents(IConfiguration configuration, IKafkaEventsClient kafkaEventsClient)
-{
-    var apiKeyConfigValue = $"QuickCodeApiKeys:UserManagerModuleApiKey";
-    var configApiKey = configuration.GetValue<string>(apiKeyConfigValue);
-    SetKafkaApiKeyToClients(kafkaEventsClient, configApiKey!);
-    var kafkaEvents = await kafkaEventsClient.GetKafkaEventsAsync();
-    return kafkaEvents.ToList();
-}
+
 async Task<List<GroupHttpMethodPath>> GetAllGroupMethods(IConfiguration configuration, IApiPermissionGroupsClient apiPermissionGroupsClient, IApiMethodDefinitionsClient apiMethodDefinitionsClient)
 {
     
@@ -559,11 +440,6 @@ async Task<List<GroupHttpMethodPath>> GetAllGroupMethods(IConfiguration configur
         };
 
     return allMethods.ToList();
-}
-
-void SetKafkaApiKeyToClients(IKafkaEventsClient kafkaEventsClient, string configUserManagerApiKey)
-{
-    (kafkaEventsClient as ClientBase)!.SetApiKey(configUserManagerApiKey);
 }
 
 void SetApiKeyToClients(IApiPermissionGroupsClient apiPermissionGroupsClient, IApiMethodDefinitionsClient apiMethodDefinitionsClient, string configUserManagerApiKey)

@@ -224,9 +224,7 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Repositories
                         Id = kafka_events.Id,
                         ApiMethodDefinitionId = kafka_events.ApiMethodDefinitionId,
                         TopicName = kafka_events.TopicName,
-                        OnComplete = kafka_events.OnComplete,
-                        OnError = kafka_events.OnError,
-                        OnTimeout = kafka_events.OnTimeout
+                        IsActive = kafka_events.IsActive
                     };
                 var result = await queryableResult.ToListAsync();
                 returnValue.Value = result;
@@ -254,9 +252,7 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Repositories
                         Id = kafka_events.Id,
                         ApiMethodDefinitionId = kafka_events.ApiMethodDefinitionId,
                         TopicName = kafka_events.TopicName,
-                        OnComplete = kafka_events.OnComplete,
-                        OnError = kafka_events.OnError,
-                        OnTimeout = kafka_events.OnTimeout
+                        IsActive = kafka_events.IsActive
                     };
                 var result = await queryableResult.FirstAsync();
                 if (result == null)

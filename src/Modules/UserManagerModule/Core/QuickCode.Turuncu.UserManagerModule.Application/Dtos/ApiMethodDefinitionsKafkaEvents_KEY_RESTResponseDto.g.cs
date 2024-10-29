@@ -19,8 +19,6 @@ namespace QuickCode.Turuncu.UserManagerModule.Application.Dtos
         public int Id { get; init; }
         public int ApiMethodDefinitionId { get; init; }
         public string TopicName { get; init; }
-        public bool OnComplete { get; init; }
-        public bool OnError { get; init; }
-        public bool OnTimeout { get; init; }
+        public bool IsActive { get; init; }
     }
 }

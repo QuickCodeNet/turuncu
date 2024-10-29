@@ -46,23 +46,37 @@ namespace QuickCode.Turuncu.Portal.Controllers
             this.cache = cache;
         }
         
-        protected async Task<Dictionary<string, IEnumerable<SelectListItem>>> FillComboBoxAsync<T>(string key, Func<Task<ObservableCollection<T>>> getDataFunc)
+        protected async Task<Dictionary<string, IEnumerable<SelectListItem>>> FillComboBoxAsync<T>(string key,
+            Func<Task<ObservableCollection<T>>> getDataFunc,
+            Func<T, bool> filterPredicate = null)
         {
-            var cacheKey = $"{key}ComboList";
+            var cacheKey = $"{key}Data"; 
             var comboBoxList = new Dictionary<string, IEnumerable<SelectListItem>>();
-            if (!cache.TryGetValue(cacheKey, out List<SelectListItem> cachedComboList))
+            
+            if (!cache.TryGetValue(cacheKey, out ObservableCollection<T> cachedData))
             {
-                var data = await getDataFunc();
-                cachedComboList = data.AsMultiSelectList(GetComboBoxList(key)).ToList();
+                cachedData = await getDataFunc();
 
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(5));
 
-                cache.Set(cacheKey, cachedComboList, cacheEntryOptions);
+                cache.Set(cacheKey, cachedData, cacheEntryOptions);
             }
 
-            comboBoxList.Add(key, cachedComboList);
+            var finalData = filterPredicate != null 
+                ? new ObservableCollection<T>(cachedData.Where(filterPredicate))
+                : cachedData;
+            
+            var selectList = finalData.AsMultiSelectList(GetComboBoxList(key)).ToList();
+            comboBoxList.Add(key, selectList);
+    
             return comboBoxList;
+        }
+        
+        protected void RemoveFromComboBoxCache(string key)
+        {
+            var cacheKey = $"{key}ComboList";
+            cache.Remove(cacheKey);
         }
 
         public string GetErrorDescription(int errorCode)

@@ -47,19 +47,8 @@ namespace QuickCode.Turuncu.Portal.Controllers.UserManagerModule
         public async Task<JsonResult> UpdateKafkaEvent(UpdateKafkaEvent request)
         {
             var eventData = await pageClient.KafkaEventsGetAsync(request.Id);
-            switch (request.EventName)
-            {
-                case "complete":
-                    eventData.OnComplete = request.Value == 1;
-                    break;
-                case "error":
-                    eventData.OnError = request.Value == 1;
-                    break;
-                case "timeout":
-                    eventData.OnTimeout = request.Value == 1;
-                    break;
-            }
-
+            eventData.IsActive = request.Value == 1;
+            
             var result = await pageClient.KafkaEventsPutAsync(request.Id, eventData);
             return Json(result);
         }

@@ -7,7 +7,6 @@ var counter = 0;
 TempData["Title"] = title;
 }
 <div class="container-fluid" IsPageAvailable="true">
-    <form method="post" id="formList">
         <div class="card text shadow mb-4">
 
             <div class="card-body">
@@ -67,9 +66,8 @@ TempData["Title"] = title;
                                     <th>HttpMethod</th>
                                     <th>Path</th>
                                     <th>Topic Name</th>
-                                    <th>OnComplete</th>
-                                    <th>OnError</th>
-                                    <th>OnTimeout</th>
+                                    <th>Is Active</th>
+                                    <th>Workflows</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -82,61 +80,29 @@ TempData["Title"] = title;
                                     <td>@item.TopicName</td>
                                     <td>
                                         <div style="margin-left:-20px;">
-                                            @if (item.OnComplete)
+                                            @if (item.IsActive)
                                             {
-                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_complete_{item.Id}") checked
-                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i> On"
-                                                   data-off="<i class='fa fa-times'></i>Off"
-                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnComplete/>
+                                                <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_isactive_{item.Id}") checked
+                                                       data-toggle="toggle" data-on="<i class='fa fa-check'></i> On"
+                                                       data-off="<i class='fa fa-times'></i>Off"
+                                                       data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.IsActive/>
                                             }
                                             else
                                             {
-                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_complete_{item.Id}")
-                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i>
+                                                <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_isactive_{item.Id}")
+                                                       data-toggle="toggle" data-on="<i class='fa fa-check'></i>
                                                                   On" data-off="<i class='fa fa-times'></i>
                                                                    Off"
-                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnComplete/>
+                                                       data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.IsActive/>
                                             }
                                         </div>
                                     </td>
-                                    <td>
-                                        <div style="margin-left:-20px;">
-                                            @if (item.OnError)
-                                            {
-                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_error_{item.Id}") checked
-                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i> On"
-                                                   data-off="<i class='fa fa-times'></i>Off"
-                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnError/>
-                                            }
-                                            else
-                                            {
-                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_error_{item.Id}")
-                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i>
-                                                                  On" data-off="<i class='fa fa-times'></i>
-                                                                   Off"
-                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnError/>
-                                            }
-                                        </div>
+                                    <td style="display: flex; justify-content: center; align-items: center;">
+                                        <button type="button" id=@string.Format($"DetailItem_{item.Id}") class="opButtonWorkflow" bc-color="Primary" bc-tooltip=@string.Format($"Get Workflows - Event {item.Id}") bc-size="Small">
+                                            <i class="fas fa-th-list"></i>
+                                        </button>
                                     </td>
-                                    <td>
-                                        <div style="margin-left:-20px;">
-                                            @if (item.OnTimeout)
-                                            {
-                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_timeout_{item.Id}") checked
-                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i> On"
-                                                   data-off="<i class='fa fa-times'></i>Off"
-                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnTimeout/>
-                                            }
-                                            else
-                                            {
-                                            <input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_timeout_{item.Id}")
-                                                   data-toggle="toggle" data-on="<i class='fa fa-check'></i>
-                                                                  On" data-off="<i class='fa fa-times'></i>
-                                                                   Off"
-                                                   data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnTimeout/>
-                                            }
-                                        </div>
-                                    </td>
+
                                 </tr>
                                 }
                                 </tbody>
@@ -155,10 +121,14 @@ TempData["Title"] = title;
                 }
             </div>
         </div>
-    </form>
 
-    <div class="modal fade bd-example-modal-lg" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document" id='itemDetailsContainer'>
+        <div class="modal fade bd-example-modal-lg" id="itemListModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" id='itemListContainer'>
+            </div>
+        </div>
+
+      <div class="modal fade bd-example-modal-xl" id="itemDetailsModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" id="itemDetailsContainer">
         </div>
     </div>
 
@@ -171,6 +141,7 @@ TempData["Title"] = title;
 <script type="text/javascript">
     $("img.lazyload").lazyload();
 
+    
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
         let targetId = '';
@@ -193,6 +164,31 @@ TempData["Title"] = title;
         });
     });
 
+    $('.opButtonWorkflow').click(function (e) {
+        let selectedKey = this.id.replace('DetailItem_', '');
+        openModalPopup(selectedKey);
+    });
+
+    function openModalPopup(selectedKey) {
+        let popupUrl = '/UserManagerModuleTopicWorkflows/List' + '/' + selectedKey;
+
+        $.ajax({
+            type: "GET",
+            url: popupUrl,
+            processData: false,
+            success: function (data) {
+                $('#itemListContainer').html(data);
+                $('#itemListModal').modal('show');
+                //loadJsonAllEditors();
+                //loadYamlAllEditors();
+            },
+            error: function (xhr, textStatus, error) {
+                console.log(xhr.statusText);
+                console.log(textStatus);
+                console.log(error);
+            },
+        });
+    }
     function submitform() {
         $('#formList').submit();
     }

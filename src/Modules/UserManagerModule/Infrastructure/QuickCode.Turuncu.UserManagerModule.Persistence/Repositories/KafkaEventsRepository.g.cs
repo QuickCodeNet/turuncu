@@ -224,9 +224,7 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Repositories
                         Id = kafka_events.Id,
                         ApiMethodDefinitionId = kafka_events.ApiMethodDefinitionId,
                         TopicName = kafka_events.TopicName,
-                        OnComplete = kafka_events.OnComplete,
-                        OnError = kafka_events.OnError,
-                        OnTimeout = kafka_events.OnTimeout,
+                        IsActive = kafka_events.IsActive,
                         HttpMethod = api_method_definitions.HttpMethod,
                         ControllerName = api_method_definitions.ControllerName,
                         Path = api_method_definitions.Path
@@ -237,6 +235,99 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Repositories
             catch (Exception ex)
             {
                 _logger.LogError("{repoName} Exception {error}", "KafkaEvents KafkaEventsGetKafkaEvents", ex.Message);
+                returnValue.Code = 404;
+                returnValue.Message = ex.ToString();
+            }
+
+            return returnValue;
+        }
+
+        public async Task<DLResponse<List<KafkaEventsGetActiveKafkaEventsResponseDto>>> KafkaEventsGetActiveKafkaEventsAsync()
+        {
+            var returnValue = new DLResponse<List<KafkaEventsGetActiveKafkaEventsResponseDto>>();
+            try
+            {
+                var queryableResult =
+                    from kafka_events in _readContext.KafkaEvents
+                    join api_method_definitions in _readContext.ApiMethodDefinitions on kafka_events.ApiMethodDefinitionId equals api_method_definitions.Id
+                    where kafka_events.IsActive.Equals(true)select new KafkaEventsGetActiveKafkaEventsResponseDto()
+                    {
+                        Id = kafka_events.Id,
+                        ApiMethodDefinitionId = kafka_events.ApiMethodDefinitionId,
+                        TopicName = kafka_events.TopicName,
+                        IsActive = kafka_events.IsActive,
+                        HttpMethod = api_method_definitions.HttpMethod,
+                        ControllerName = api_method_definitions.ControllerName,
+                        Path = api_method_definitions.Path
+                    };
+                var result = await queryableResult.ToListAsync();
+                returnValue.Value = result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("{repoName} Exception {error}", "KafkaEvents KafkaEventsGetActiveKafkaEvents", ex.Message);
+                returnValue.Code = 404;
+                returnValue.Message = ex.ToString();
+            }
+
+            return returnValue;
+        }
+
+        public async Task<DLResponse<List<KafkaEventsTopicWorkflows_RESTResponseDto>>> KafkaEventsTopicWorkflows_RESTAsync(int kafkaEventsId)
+        {
+            var returnValue = new DLResponse<List<KafkaEventsTopicWorkflows_RESTResponseDto>>();
+            try
+            {
+                var queryableResult =
+                    from topic_workflows in _readContext.TopicWorkflows
+                    join kafka_events in _readContext.KafkaEvents on topic_workflows.KafkaEventId equals kafka_events.Id
+                    where kafka_events.Id.Equals(kafkaEventsId)select new KafkaEventsTopicWorkflows_RESTResponseDto()
+                    {
+                        Id = topic_workflows.Id,
+                        KafkaEventId = topic_workflows.KafkaEventId,
+                        WorkflowContent = topic_workflows.WorkflowContent
+                    };
+                var result = await queryableResult.ToListAsync();
+                returnValue.Value = result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("{repoName} Exception {error}", "KafkaEvents KafkaEventsTopicWorkflows_REST", ex.Message);
+                returnValue.Code = 404;
+                returnValue.Message = ex.ToString();
+            }
+
+            return returnValue;
+        }
+
+        public async Task<DLResponse<KafkaEventsTopicWorkflows_KEY_RESTResponseDto>> KafkaEventsTopicWorkflows_KEY_RESTAsync(int kafkaEventsId, int topicWorkflowsId)
+        {
+            var returnValue = new DLResponse<KafkaEventsTopicWorkflows_KEY_RESTResponseDto>();
+            try
+            {
+                var queryableResult =
+                    from topic_workflows in _readContext.TopicWorkflows
+                    join kafka_events in _readContext.KafkaEvents on topic_workflows.KafkaEventId equals kafka_events.Id
+                    where kafka_events.Id.Equals(kafkaEventsId) && topic_workflows.Id.Equals(topicWorkflowsId)select new KafkaEventsTopicWorkflows_KEY_RESTResponseDto()
+                    {
+                        Id = topic_workflows.Id,
+                        KafkaEventId = topic_workflows.KafkaEventId,
+                        WorkflowContent = topic_workflows.WorkflowContent
+                    };
+                var result = await queryableResult.FirstAsync();
+                if (result == null)
+                {
+                    returnValue.Code = 404;
+                    returnValue.Message = $"Not found in KafkaEvents";
+                }
+                else
+                {
+                    returnValue.Value = result;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("{repoName} Exception {error}", "KafkaEvents KafkaEventsTopicWorkflows_KEY_REST", ex.Message);
                 returnValue.Code = 404;
                 returnValue.Message = ex.ToString();
             }

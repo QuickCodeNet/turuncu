@@ -433,33 +433,21 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DeletedOnUtc");
 
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true)
+                        .HasColumnName("IsActive");
+
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false)
                         .HasColumnName("IsDeleted");
 
-                    b.Property<bool>("OnComplete")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(true)
-                        .HasColumnName("OnComplete");
-
-                    b.Property<bool>("OnError")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(true)
-                        .HasColumnName("OnError");
-
-                    b.Property<bool>("OnTimeout")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(true)
-                        .HasColumnName("OnTimeout");
-
                     b.Property<string>("TopicName")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)")
                         .HasColumnName("TopicName");
 
                     b.HasKey("Id");
@@ -761,21 +749,6 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Migrations
                         .HasDefaultValue(false)
                         .HasColumnName("IsDeleted");
 
-                    b.Property<string>("RefIdColumn")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)")
-                        .HasColumnName("RefIdColumn");
-
-                    b.Property<string>("RefTableColumnId")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)")
-                        .HasColumnName("RefTableColumnId");
-
-                    b.Property<string>("RefTableName")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)")
-                        .HasColumnName("RefTableName");
-
                     b.Property<string>("StringFormat")
                         .HasMaxLength(2147483647)
                         .HasColumnType("nvarchar(max)")
@@ -792,6 +765,44 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Migrations
                         .HasFilter("IsDeleted = 0");
 
                     b.ToTable("TableComboboxSettings");
+                });
+
+            modelBuilder.Entity("QuickCode.Turuncu.UserManagerModule.Domain.Entities.TopicWorkflows", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("DeletedOnUtc")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("DeletedOnUtc");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<int>("KafkaEventId")
+                        .HasColumnType("int")
+                        .HasColumnName("KafkaEventId");
+
+                    b.Property<string>("WorkflowContent")
+                        .HasMaxLength(2147483647)
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("WorkflowContent");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted")
+                        .HasFilter("IsDeleted = 0");
+
+                    b.HasIndex("KafkaEventId");
+
+                    b.ToTable("TopicWorkflows");
                 });
 
             modelBuilder.Entity("QuickCode.Turuncu.UserManagerModule.Domain.Entities.ApiPermissionGroups", b =>
@@ -932,6 +943,17 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("QuickCode.Turuncu.UserManagerModule.Domain.Entities.TopicWorkflows", b =>
+                {
+                    b.HasOne("QuickCode.Turuncu.UserManagerModule.Domain.Entities.KafkaEvents", "KafkaEvent")
+                        .WithMany("TopicWorkflows")
+                        .HasForeignKey("KafkaEventId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("KafkaEvent");
+                });
+
             modelBuilder.Entity("QuickCode.Turuncu.UserManagerModule.Domain.Entities.ApiMethodDefinitions", b =>
                 {
                     b.Navigation("ApiPermissionGroups");
@@ -957,6 +979,11 @@ namespace QuickCode.Turuncu.UserManagerModule.Persistence.Migrations
                     b.Navigation("AspNetUserTokens");
 
                     b.Navigation("RefreshTokens");
+                });
+
+            modelBuilder.Entity("QuickCode.Turuncu.UserManagerModule.Domain.Entities.KafkaEvents", b =>
+                {
+                    b.Navigation("TopicWorkflows");
                 });
 
             modelBuilder.Entity("QuickCode.Turuncu.UserManagerModule.Domain.Entities.PermissionGroups", b =>

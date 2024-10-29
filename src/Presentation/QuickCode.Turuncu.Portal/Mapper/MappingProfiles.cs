@@ -3,6 +3,8 @@ using System.Reflection;
 using AutoMapper;
 using System.Linq;
 using QuickCode.Turuncu.Common.Controllers;
+using QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts;
+using QuickCode.Turuncu.Portal.Models.UserManagerModule;
 
 namespace QuickCode.Turuncu.Portal.Mapper
 {
@@ -10,6 +12,7 @@ namespace QuickCode.Turuncu.Portal.Mapper
     {
         public MappingProfiles()
         {
+            CreateMap<TopicWorkflowsGetWorkflowsResponseDto, TopicWorkflowsObj>();
             AddServiceModelMappings();
         }
 

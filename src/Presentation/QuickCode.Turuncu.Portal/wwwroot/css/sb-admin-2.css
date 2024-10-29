@@ -6316,6 +6316,10 @@ a.close.disabled {
     margin-right: .25rem;
 }
 
+.yamleditor-class {
+  margin-right: .25rem;
+}
+
 .modal-scrollbar-measure {
     position: absolute;
     top: -9999px;

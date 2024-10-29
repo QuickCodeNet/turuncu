@@ -6,8 +6,81 @@ using QuickCode.Turuncu.Common.Controllers;
 using QuickCode.Turuncu.Common.Nswag.Extensions;
 using QuickCode.Turuncu.EventListenerService;
 using Serilog;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 var builder = WebApplication.CreateBuilder(args);
+string yamlContent = @"
+name: 'Order Processing Workflow'
+version: '1.0.0'
+description: 'A workflow for processing customer orders'
+
+variables:
+  retryCount:
+    type: 'int'
+    value: '3'
+  apiBaseUrl:
+    type: 'string'
+    value: 'https://api.example.com'
+  timeoutDuration:
+    type: 'int'
+    value: '30'
+
+steps:
+  validateOrder:
+    url: '{{QuickCodeClients.QuickCodeModuleApi}}/api/quick-code-module/db-types'
+    method: 'GET'
+    headers:
+      X-Api-Key: '{{QuickCodeApiKeys.QuickCodeModuleApiKey}}'
+    body:
+    timeoutSeconds: 30
+    onSuccess:
+      - condition: 'validateOrder.statusCode == 404'
+        action: 'processPayment'
+      - condition: 'response.isValid == true'
+        action: 'processPayment'
+      - condition: 'default'
+        action: 'handleInvalidOrder'
+    steps:
+      processPayment:
+        url: '{{variables.apiBaseUrl}}/payments'
+        method: 'POST'
+        headers:
+          Authorization: 'Bearer {{input.apiKey}}'
+        body:
+          orderId: '{{input.orderId}}'
+          amount: '{{validateOrder.response.totalAmount}}'
+      handleInvalidOrder:
+        url: '{{variables.apiBaseUrl}}/reject'
+        method: 'POST'
+        headers:
+          Authorization: 'Bearer {{input.apiKey}}'
+        body:
+          orderId: '{{input.orderId}}'
+          reason: '{{validateOrder.response.errorMessage}}'
+
+  checkInventory:
+    url: '{{variables.apiBaseUrl}}/inventory/check'
+    method: 'GET'
+    headers:
+      Authorization: 'Bearer {{input.apiKey}}'
+    dependsOn:
+      - 'validateOrder'
+    condition: 'validateOrder.response.isValid == true'
+    repeat: '{{variables.retryCount}}'
+
+  createShipment:
+    url: '{{variables.apiBaseUrl}}/shipments'
+    method: 'POST'
+    headers:
+      Authorization: 'Bearer {{input.apiKey}}'
+    body:
+      orderId: '{{input.orderId}}'
+      address: '{{validateOrder.response.shippingAddress}}'
+    dependsOn:
+      - 'checkInventory'
+    timeoutSeconds: 30";
+
 var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
 Log.Information($"Started({environmentName})...");
 
@@ -82,5 +155,30 @@ app.MapGet("/get-topic-refresh-interval", () => DynamicKafkaBackgroundService.Ge
 
 app.MapGet("/get-topic-listener-interval", () => DynamicKafkaBackgroundService.GetTopicListenerInterval())
     .WithOpenApi();
+
+
+app.MapPost("/execute-workflow", async (HttpContext context, IHttpClientFactory httpClientFactory,
+    IConfiguration configuration, ILogger<Program> logger) =>
+{
+    try
+    {
+        var deserializer = new DeserializerBuilder()
+            .WithNamingConvention(CamelCaseNamingConvention.Instance)
+            .Build();
+
+        var workflow = deserializer.Deserialize<Workflow>(yamlContent);
+
+        var executor = new WorkflowExecutor(httpClientFactory.CreateClient(), context.Request.Query, logger,
+            configuration);
+        var results = await executor.ExecuteWorkflow(workflow);
+
+        return Results.Ok(results);
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Workflow execution failed");
+        return Results.Problem("Workflow execution failed", statusCode: 500);
+    }
+});
 
 app.Run();

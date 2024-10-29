@@ -1,50 +1,52 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-$(function () {
+﻿$(function () {
     init();
 
     $('.opButtonDetail').click(function (e) {
-        var selectedKey = this.id.replace('DetailItem_', '');
+        let selectedKey = this.id.replace('DetailItem_', '');
         $('#SelectedKey').val(selectedKey);
-
-        var url = "DetailItem";
-        openModalPopup(url);
+        $("#formList").data('SelectedKey',selectedKey);
+        let moduleName = $(this).data('module-name');
+        let actionName = "DetailItem";
+        openModalPopup(moduleName, actionName);
     });
 
     $('.opButtonInsert').click(function (e) {
-        var url = "InsertItem";
-        openModalPopup(url);
+        let actionName = "InsertItem";
+        let moduleName = $(this).data('module-name');
+        openModalPopup(moduleName, actionName);
     });
 
     $('.opButtonDelete').click(function (e) {
-        var selectedKey = this.id.replace('DeleteItem_', '');
+        let selectedKey = this.id.replace('DeleteItem_', '');
         $('#SelectedKey').val(selectedKey);
-
-        var url = "DeleteItem";
-        openModalPopup(url);
+        $("#formList").data('SelectedKey',selectedKey);
+        let moduleName = $(this).data('module-name');
+        let actionName = "DeleteItem";
+        openModalPopup(moduleName, actionName);
     });
 
     $('.opButtonUpdate').click(function (e) {
-        var selectedKey = this.id.replace('UpdateItem_', '');
+        let selectedKey = this.id.replace('UpdateItem_', '');
         $('#SelectedKey').val(selectedKey);
-
-        var url = "UpdateItem";
-        openModalPopup(url);
+        $("#formList").data('SelectedKey',selectedKey);
+        let moduleName = $(this).data('module-name');
+        let actionName = "UpdateItem";
+        openModalPopup(moduleName, actionName);
     });
 
+    function openModalPopup(moduleName, actionName) {
+        let popupUrl = `/${moduleName}/${actionName}`;
 
-    function openModalPopup(url) {
         $.ajax({
             type: "POST",
-            url: url,
+            url: popupUrl,
             processData: false,
             data: $("#formList").serialize(),
             success: function (data) {
                 $('#itemDetailsContainer').html(data);
                 $('#itemDetailsModal').modal('show');
                 loadJsonAllEditors();
+                loadYamlAllEditors();
             },
             error: function (xhr, textStatus, error) {
                 console.log(xhr.statusText);
@@ -66,7 +68,7 @@ function init() {
     }
     
     $('button[data-toggle="ajax-modal"]').click(function (event) {
-        var url = $(this).data('url');
+        let url = $(this).data('url');
         $.get(url).done(function (data) {
             placeholderElement.html(data);
             placeholderElement.find('.modal').modal('show');
@@ -76,12 +78,12 @@ function init() {
     placeholderElement.on('click', '[data-save="modal"]', function (event) {
         event.preventDefault();
 
-        var form = $(this).parents('.modal').find('form');
-        var actionUrl = form.attr('action');
-        var dataToSend = form.serialize();
+        let form = $(this).parents('.modal').find('form');
+        let actionUrl = form.attr('action');
+        let dataToSend = form.serialize();
 
         $.post(actionUrl, dataToSend).done(function (data) {
-            var isValid = newBody.find('[name="IsValid"]').val() == 'True';
+            let isValid = newBody.find('[name="IsValid"]').val() === 'True';
             if (isValid) {
                 placeholderElement.find('.modal').modal('hide');
             }
@@ -90,7 +92,7 @@ function init() {
 
     $(document).on('click', '[data-toggle="lightbox"]', function (event) {
         event.preventDefault();
-        var targetId = '';
+        let targetId = '';
         $(this).ekkoLightbox({
             onShown: function (lb) {
                 $(targetId).addClass('lbackground');
@@ -112,13 +114,38 @@ function init() {
 }
 
 function loadJsonAllEditors() {
-    var jsonEditors = $('.jsoneditor-class');
+    let jsonEditors = $('.jsoneditor-class');
     jsonEditors.each(function (index) {
         const itemName = jsonEditors[index].id;
         const jsonReadonlyPrefix = "jsonEditorRO_";
         const isReadonly = itemName.startsWith(jsonReadonlyPrefix);
         const jsonPrefix = isReadonly ? jsonReadonlyPrefix : jsonReadonlyPrefix.replace('RO_', '_');
         loadJsonEditor(itemName, itemName.replace(jsonPrefix, ''), isReadonly);
+    });
+}
+
+function loadYamlAllEditors() {
+    let jsonEditors = $('.yamleditor-class');
+    jsonEditors.each(function (index) {
+        const itemName = jsonEditors[index].id;
+        const jsonReadonlyPrefix = "yamlEditorRO_";
+        const isReadonly = itemName.startsWith(jsonReadonlyPrefix);
+        let editor = ace.edit(itemName);
+        editor.session.setMode("ace/mode/yaml");
+        editor.setTheme("ace/theme/github");
+        editor.setReadOnly(isReadonly);
+    });
+}
+
+function addYamlEditorsToFormData(formData) {
+    const yamlEditorPrefix = 'yamlEditor_';
+    const yamlEditors = document.querySelectorAll(`div[id^='${yamlEditorPrefix}']`);
+
+    yamlEditors.forEach(editor => {
+        const editorId = editor.id.replace(yamlEditorPrefix, '').replace('_','.');
+        const aceEditor = ace.edit(editor.id);
+        const editorContent = aceEditor.getValue().trim();
+        formData.append(editorId, editorContent);
     });
 }
 
@@ -129,7 +156,7 @@ function setPage(pageId) {
 
 function loadJsonEditor(jsonEditorName, jsonDataItem, isReadonly) {
     const container = document.getElementById(jsonEditorName);
-    var modes = ['code', 'text', 'tree'];
+    let modes = ['code', 'text', 'tree'];
     const options = {
         mainMenuBar: true,
         navigationBar: true,
@@ -149,10 +176,10 @@ function loadJsonEditor(jsonEditorName, jsonDataItem, isReadonly) {
 
 function setJsonDataToEditor(container, options, jsonDataItem) {
     const editor = new JSONEditor(container, options);
-    var jsonValue = $('#' + jsonDataItem).val();
-    var emptyJson = "{}";
+    let jsonValue = $('#' + jsonDataItem).val();
+    let emptyJson = "{}";
 
-    if (jsonValue.length == 0) {
+    if (jsonValue.length === 0) {
         jsonValue = emptyJson;
     }
     try {
@@ -167,7 +194,7 @@ function setJsonDataToEditor(container, options, jsonDataItem) {
 
 
 $.validator.methods.range = function (value, element, param) {
-    var globalizedValue = value.replace(",", ".");
+    let globalizedValue = value.replace(",", ".");
     return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
 }
 

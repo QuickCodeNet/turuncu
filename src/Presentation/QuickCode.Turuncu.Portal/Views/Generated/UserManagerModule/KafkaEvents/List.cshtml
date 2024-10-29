@@ -36,9 +36,7 @@
                                <th>Id</th>
 <th>Api Method Definition Id</th>
 <th>Topic Name</th>
-<th>On Complete</th>
-<th>On Error</th>
-<th>On Timeout</th>
+<th>Is Active</th>
 
                             </tr>
                         </thead>
@@ -51,47 +49,17 @@
 <td>			@string.Format("{0}", Model.ComboList["ApiMethodDefinitions"].GetListItemByItemId(item.ApiMethodDefinitionId))</td>
 <td>@item.TopicName</td>
 <td><div style="margin-left:-20px;">
-@if (@item.OnComplete == true)                                                                                                            
+@if (@item.IsActive == true)                                                                                                            
 {                                                                                                                                      
-	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item.OnComplete") checked disabled       
+	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item.IsActive") checked disabled       
 	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnComplete />                                        
+	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.IsActive />                                        
 }                                                                                                                                      
 else                                                                                                                                   
 {                                                                                                                                      
-	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item_OnComplete") disabled               
+	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item_IsActive") disabled               
 	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnComplete />                                        
-}
-</div>
-</td>
-<td><div style="margin-left:-20px;">
-@if (@item.OnError == true)                                                                                                            
-{                                                                                                                                      
-	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item.OnError") checked disabled       
-	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnError />                                        
-}                                                                                                                                      
-else                                                                                                                                   
-{                                                                                                                                      
-	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item_OnError") disabled               
-	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnError />                                        
-}
-</div>
-</td>
-<td><div style="margin-left:-20px;">
-@if (@item.OnTimeout == true)                                                                                                            
-{                                                                                                                                      
-	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item.OnTimeout") checked disabled       
-	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnTimeout />                                        
-}                                                                                                                                      
-else                                                                                                                                   
-{                                                                                                                                      
-	<input type="checkbox" onchange="checkBoxChanged(this);" id=@string.Format($"cbox_item_OnTimeout") disabled               
-	data-toggle="toggle" data-on="<i class='fa fa-check'></i>" data-off="<i class='fa fa-times'></i>"                            
-	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.OnTimeout />                                        
+	data-onstyle="primary" data-offstyle="danger" data-style="ios" value=@item.IsActive />                                        
 }
 </div>
 </td>
@@ -114,7 +82,7 @@ else
     </form>
 
     <div class="modal fade bd-example-modal-lg" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document" id='itemDetailsContainer'>
+        <div class="modal-dialog modal-lg" role="document" id="itemDetailsContainer">
         </div>
     </div>
     

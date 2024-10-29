@@ -36,14 +36,20 @@ Table "ApiMethodDefinitions" {
   "ItemType" varchar(1) [not null, default: 'M']
 }
 
+Table "TopicWorkflows" {
+  "Id" int [pk, not null, increment]
+  "KafkaEventId" int [not null]
+  "WorkflowContent" yaml [not null]
+  Note: 'Query:GET_WORKFLOWS[] Where:KafkaEventId'
+}
+
 Table "KafkaEvents" {
   "Id" int [pk, not null, increment]
   "ApiMethodDefinitionId" int [not null]
-  "TopicName" varchar(250) [not null]
-  "OnComplete" boolean [not null, default: '((0))']
-  "OnError" boolean [not null, default: '((0))']
-  "OnTimeout" boolean [not null, default: '((0))']
-  Note: 'Query:GET_KAFKA_EVENTS[] Tables:KafkaEvents K, ApiMethodDefinitions A Select:K.*, A.HttpMethod, A.ControllerName, A.Path'
+  "TopicName" varchar(1000) [not null]
+  "IsActive" boolean [not null, default: '((0))']
+  Note: 'Query:GET_KAFKA_EVENTS[] Tables:KafkaEvents K, ApiMethodDefinitions A Select:K.*, A.HttpMethod, A.ControllerName, A.Path '
+  Note: 'Query:GET_ACTIVE_KAFKA_EVENTS[] Tables:KafkaEvents K, ApiMethodDefinitions A Where:K.IsActive[Equals|true] Select:K.*, A.HttpMethod, A.ControllerName, A.Path '
 }
 
 Table "ApiPermissionGroups" {
@@ -71,9 +77,6 @@ Table "PermissionGroups" {
 Table "TableComboboxSettings" {
   "TableName" varchar(250) [pk, not null]
   "IdColumn" varchar(250)
-  "RefTableName" varchar(250)
-  "RefTableColumnId" varchar(250)
-  "RefIdColumn" varchar(250)
   "TextColumns" varchar(max)
   "StringFormat" varchar(max)
 }
@@ -178,3 +181,5 @@ Ref: "PortalPermissionGroups"."PermissionGroupId" > "PermissionGroups"."Id"
 Ref: "ApiPermissionGroups"."PermissionGroupId" > "PermissionGroups"."Id"
 
 Ref: "RefreshTokens"."UserId" > "AspNetUsers"."Id"
+
+Ref: "TopicWorkflows"."KafkaEventId" > "KafkaEvents"."Id"

@@ -125,7 +125,7 @@ namespace QuickCode.Turuncu.Portal.Controllers.UserManagerModule
             ModelBinder(ref model);
             SetModelBinder(ref model);
             model.SelectedItem = new AspNetUserRolesObj();
-            return await Task.FromResult(PartialView("Insert", model));
+            return PartialView("Insert", model);
         }
 
         [Route("DetailItem")]

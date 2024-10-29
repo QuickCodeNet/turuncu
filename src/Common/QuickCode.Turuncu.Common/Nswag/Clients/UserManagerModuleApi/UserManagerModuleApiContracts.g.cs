@@ -595,6 +595,21 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
         /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<KafkaEventsGetKafkaEventsResponseDto>> GetKafkaEventsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<KafkaEventsGetActiveKafkaEventsResponseDto>> GetActiveKafkaEventsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<KafkaEventsTopicWorkflows_RESTResponseDto>> TopicWorkflowsGetAsync(int kafkaEventsId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<KafkaEventsTopicWorkflows_KEY_RESTResponseDto> TopicWorkflowsGetAsync(int kafkaEventsId, int topicWorkflowsId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
@@ -929,6 +944,47 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
 
     }
 
+    [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial interface ITopicWorkflowsClient
+    {
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<TopicWorkflowsDto>> TopicWorkflowsGetAsync(int? page = null, int? size = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Created</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<TopicWorkflowsDto> TopicWorkflowsPostAsync(TopicWorkflowsDto body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<int> CountAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<TopicWorkflowsDto> TopicWorkflowsGetAsync(int id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<bool> TopicWorkflowsPutAsync(int id, TopicWorkflowsDto body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<bool> TopicWorkflowsDeleteAsync(int id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <returns>Success</returns>
+        /// <exception cref="QuickCode.Turuncu.Common.Model.QuickCodeSwaggerException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<TopicWorkflowsGetWorkflowsResponseDto>> GetWorkflowsAsync(int topicWorkflowsKafkaEventId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+    }
+
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AccessTokenResponse
     {
@@ -1160,14 +1216,8 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
         [System.Text.Json.Serialization.JsonPropertyName("topicName")]
         public string TopicName { get; set; }
 
-        [System.Text.Json.Serialization.JsonPropertyName("onComplete")]
-        public bool OnComplete { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onError")]
-        public bool OnError { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onTimeout")]
-        public bool OnTimeout { get; set; }
+        [System.Text.Json.Serialization.JsonPropertyName("isActive")]
+        public bool IsActive { get; set; }
 
         public string ToJson()
         {
@@ -1209,14 +1259,8 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
         [System.Text.Json.Serialization.JsonPropertyName("topicName")]
         public string TopicName { get; set; }
 
-        [System.Text.Json.Serialization.JsonPropertyName("onComplete")]
-        public bool OnComplete { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onError")]
-        public bool OnError { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onTimeout")]
-        public bool OnTimeout { get; set; }
+        [System.Text.Json.Serialization.JsonPropertyName("isActive")]
+        public bool IsActive { get; set; }
 
         public string ToJson()
         {
@@ -2664,14 +2708,8 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
         [System.Text.Json.Serialization.JsonPropertyName("topicName")]
         public string TopicName { get; set; }
 
-        [System.Text.Json.Serialization.JsonPropertyName("onComplete")]
-        public bool OnComplete { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onError")]
-        public bool OnError { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onTimeout")]
-        public bool OnTimeout { get; set; }
+        [System.Text.Json.Serialization.JsonPropertyName("isActive")]
+        public bool IsActive { get; set; }
 
         public string ToJson()
         {
@@ -2701,6 +2739,58 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class KafkaEventsGetActiveKafkaEventsResponseDto
+    {
+
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("apiMethodDefinitionId")]
+        public int ApiMethodDefinitionId { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("topicName")]
+        public string TopicName { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("isActive")]
+        public bool IsActive { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("httpMethod")]
+        public string HttpMethod { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("controllerName")]
+        public string ControllerName { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("path")]
+        public string Path { get; set; }
+
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static KafkaEventsGetActiveKafkaEventsResponseDto FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Deserialize<KafkaEventsGetActiveKafkaEventsResponseDto>(data, options);
+
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class KafkaEventsGetKafkaEventsResponseDto
     {
 
@@ -2713,14 +2803,8 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
         [System.Text.Json.Serialization.JsonPropertyName("topicName")]
         public string TopicName { get; set; }
 
-        [System.Text.Json.Serialization.JsonPropertyName("onComplete")]
-        public bool OnComplete { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onError")]
-        public bool OnError { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("onTimeout")]
-        public bool OnTimeout { get; set; }
+        [System.Text.Json.Serialization.JsonPropertyName("isActive")]
+        public bool IsActive { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("httpMethod")]
         public string HttpMethod { get; set; }
@@ -2753,6 +2837,86 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
                 options.Converters.Add(converter);
 
             return System.Text.Json.JsonSerializer.Deserialize<KafkaEventsGetKafkaEventsResponseDto>(data, options);
+
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class KafkaEventsTopicWorkflows_KEY_RESTResponseDto
+    {
+
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("kafkaEventId")]
+        public int KafkaEventId { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("workflowContent")]
+        public string WorkflowContent { get; set; }
+
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static KafkaEventsTopicWorkflows_KEY_RESTResponseDto FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Deserialize<KafkaEventsTopicWorkflows_KEY_RESTResponseDto>(data, options);
+
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class KafkaEventsTopicWorkflows_RESTResponseDto
+    {
+
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("kafkaEventId")]
+        public int KafkaEventId { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("workflowContent")]
+        public string WorkflowContent { get; set; }
+
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static KafkaEventsTopicWorkflows_RESTResponseDto FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Deserialize<KafkaEventsTopicWorkflows_RESTResponseDto>(data, options);
 
         }
 
@@ -4042,15 +4206,6 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
         [System.Text.Json.Serialization.JsonPropertyName("idColumn")]
         public string IdColumn { get; set; }
 
-        [System.Text.Json.Serialization.JsonPropertyName("refTableName")]
-        public string RefTableName { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("refTableColumnId")]
-        public string RefTableColumnId { get; set; }
-
-        [System.Text.Json.Serialization.JsonPropertyName("refIdColumn")]
-        public string RefIdColumn { get; set; }
-
         [System.Text.Json.Serialization.JsonPropertyName("textColumns")]
         public string TextColumns { get; set; }
 
@@ -4079,6 +4234,86 @@ namespace QuickCode.Turuncu.Common.Nswag.Clients.UserManagerModuleApi.Contracts
                 options.Converters.Add(converter);
 
             return System.Text.Json.JsonSerializer.Deserialize<TableComboboxSettingsDto>(data, options);
+
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class TopicWorkflowsDto
+    {
+
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("kafkaEventId")]
+        public int KafkaEventId { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("workflowContent")]
+        public string WorkflowContent { get; set; }
+
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static TopicWorkflowsDto FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Deserialize<TopicWorkflowsDto>(data, options);
+
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class TopicWorkflowsGetWorkflowsResponseDto
+    {
+
+        [System.Text.Json.Serialization.JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("kafkaEventId")]
+        public int KafkaEventId { get; set; }
+
+        [System.Text.Json.Serialization.JsonPropertyName("workflowContent")]
+        public string WorkflowContent { get; set; }
+
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static TopicWorkflowsGetWorkflowsResponseDto FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            var converters = new System.Text.Json.Serialization.JsonConverter[] { new System.Text.Json.Serialization.JsonStringEnumConverter() };
+            foreach(var converter in converters)
+                options.Converters.Add(converter);
+
+            return System.Text.Json.JsonSerializer.Deserialize<TopicWorkflowsGetWorkflowsResponseDto>(data, options);
 
         }
 

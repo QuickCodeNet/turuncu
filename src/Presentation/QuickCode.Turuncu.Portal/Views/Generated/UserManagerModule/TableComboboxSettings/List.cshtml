@@ -35,9 +35,6 @@
                                <vc:operation-buttons item-id=@headerKey controller-name="" action-name=""></vc:operation-buttons>
                                <th>Table Name</th>
 <th>Id Column</th>
-<th>Ref Table Name</th>
-<th>Ref Table Column Id</th>
-<th>Ref Id Column</th>
 <th>Text Columns</th>
 <th>String Format</th>
 
@@ -50,9 +47,6 @@
                                 <vc:operation-buttons item-id=@item._Key controller-name="" action-name=""></vc:operation-buttons>
                                 <td>@item.TableName</td>
 <td>@item.IdColumn</td>
-<td>@item.RefTableName</td>
-<td>@item.RefTableColumnId</td>
-<td>@item.RefIdColumn</td>
 <td>@item.TextColumns</td>
 <td>@item.StringFormat</td>
 
@@ -74,7 +68,7 @@
     </form>
 
     <div class="modal fade bd-example-modal-lg" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document" id='itemDetailsContainer'>
+        <div class="modal-dialog modal-lg" role="document" id="itemDetailsContainer">
         </div>
     </div>
     
